@@ -4,27 +4,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { useState, useEffect } from "react";
-
+import { galleryImages } from "@/lib/gallery-data";
 
 export default function GalleryPage() {
-    const [images, setImages] = useState<string[]>([]);
-
-    useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await fetch(`/api/gallery-images?t=${Date.now()}`);
-                const data = await response.json();
-                if (data.images) {
-                    setImages(data.images);
-                }
-            } catch (error) {
-                console.error("Failed to fetch gallery images:", error);
-            }
-        };
-
-        fetchImages();
-    }, []);
+    const images = galleryImages;
 
     return (
         <main className="min-h-screen w-full bg-zinc-950 text-white pb-24 relative overflow-hidden">

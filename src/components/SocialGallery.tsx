@@ -3,29 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-
-// Placeholder data - waiting for user uploads
-
+import { galleryImages } from "@/lib/gallery-data";
 
 export default function SocialGallery() {
-    const [images, setImages] = useState<string[]>([]);
-
-    useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await fetch(`/api/gallery-images?t=${Date.now()}`);
-                const data = await response.json();
-                if (data.images && data.images.length > 0) {
-                    setImages(data.images);
-                }
-            } catch (error) {
-                console.error("Failed to fetch gallery images:", error);
-            }
-        };
-
-        fetchImages();
-    }, []);
+    // Use static images
+    const images = galleryImages;
 
     // If no images, don't show or show placeholder?
     // Let's hide if no images for now, or maybe show placeholders if empty?
