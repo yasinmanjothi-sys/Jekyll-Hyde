@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LocateIcon, Clock, Phone, MapPin } from "lucide-react";
+import { LocateIcon, Clock, Phone, MapPin, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function Location() {
@@ -46,12 +46,23 @@ export default function Location() {
                             <div>
                                 <p className="text-white text-lg font-serif mb-1">RESERVATIONS</p>
                                 <p className="mb-4">Book early to secure your ritual.</p>
-                                <a
-                                    href="tel:+254700000000"
-                                    className="inline-block border border-zinc-700 px-6 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase text-xs"
-                                >
-                                    Call to Reserve
-                                </a>
+                                <div className="flex flex-col md:flex-row gap-4">
+                                    <a
+                                        href="tel:+254707370028"
+                                        className="inline-block border border-zinc-700 px-6 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase text-xs text-center"
+                                    >
+                                        Call to Reserve
+                                    </a>
+                                    <a
+                                        href="https://wa.me/254707370028"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-2 border border-green-900/50 bg-green-900/10 text-green-500 px-6 py-3 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 uppercase text-xs"
+                                    >
+                                        <MessageCircle className="w-4 h-4" />
+                                        <span>WhatsApp</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

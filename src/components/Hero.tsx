@@ -1,11 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
 export default function Hero() {
     const [isHyde, setIsHyde] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    // Force autoplay on mount to bypass some browser restrictions
+    useEffect(() => {
+        if (videoRef.current) {
+            // Explicitly set attributes for better mobile support
+            videoRef.current.setAttribute("muted", "");
+            videoRef.current.setAttribute("playsinline", "");
+            videoRef.current.muted = true;
+
+            const playPromise = videoRef.current.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay prevented:", error);
+                });
+            }
+        }
+    }, []);
 
     // Auto-switch to Hyde mode briefly every few seconds to simulate "instability"
     useEffect(() => {
@@ -16,28 +34,30 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
+        <section className="relative w-full h-screen bg-black overflow-hidden">
             {/* Video Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 w-full h-full">
                 <video
+                    ref={videoRef}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className={`w-full h-full object-cover transition-all duration-200 ${isHyde ? "scale-105 blur-[2px] contrast-150 hue-rotate-15" : "opacity-80"
-                        }`}
+                    className={`w-full h-full object-cover transition-all duration-200 ${isHyde ? "scale-105 blur-[1px] contrast-125 hue-rotate-15" : "opacity-80"}`}
+                    style={{
+                        willChange: "transform, filter",
+                        backfaceVisibility: "hidden",
+                        transform: "translate3d(0, 0, 0)"
+                    }}
                 >
                     <source src="/hero 2.mp4" type="video/mp4" />
                 </video>
-                {/* Fallback gradient/overlay to ensure text readability and mood */}
-                <div className="absolute inset-0 bg-black/10" />
+                {/* Mobile Overlay Gradient for smooth transition if needed */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden" />
             </div>
 
-            {/* Brand Text */}
-            {/* Brand Text - Handled by SiteHeader now */}
-
-            {/* Overlay vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black pointer-events-none z-20" />
+            {/* Global Overlay vignette (adjust z-index or remove if it interferes with text on desktop) */}
+            {/* Kept minimal for split layout */}
         </section>
     );
 }

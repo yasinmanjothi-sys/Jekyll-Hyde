@@ -33,7 +33,7 @@ export default function SocialGallery() {
 
                 {/* Marquee Container */}
                 <div className="relative w-full flex">
-                    <div className="flex animate-marquee whitespace-nowrap">
+                    <div className="flex animate-marquee whitespace-nowrap" style={{ willChange: "transform", backfaceVisibility: "hidden", transform: "translate3d(0,0,0)" }}>
                         {displayImages.length > 0 ? (
                             [...displayImages, ...displayImages].map((src, index) => (
                                 <div

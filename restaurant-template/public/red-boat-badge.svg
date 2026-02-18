@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #ed1c24;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #ed1c24;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6, .cls-7, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        fill: #c1272d;
+      }
+
+      .cls-8 {
+        font-family: Code-7x5, 'Code 7x5';
+        font-size: 11.87px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" width="220" height="40"/>
+  <text class="cls-8" transform="translate(8.18 25.35)"><tspan class="cls-1" x="0" y="0">RED</tspan><tspan class="cls-2" x="31.15" y="0"> </tspan><tspan class="cls-5" x="34.11" y="0">BOAT MEDIA</tspan></text>
+  <g>
+    <polygon class="cls-3" points="148.34 7.99 167.77 31 180.64 17.7 148.34 7.99"/>
+    <polygon class="cls-3" points="213.33 8.11 194.15 31 181.28 17.7 213.33 8.11"/>
+    <polygon class="cls-7" points="148.13 7.81 180.87 14.39 180.96 17.63 148.13 7.81"/>
+    <polygon class="cls-7" points="213.79 7.8 181.03 14.4 180.96 17.63 213.79 7.8"/>
+    <polygon class="cls-7" points="167.76 31.24 194.15 31.24 180.96 17.6 167.76 31.24"/>
+    <polygon class="cls-4" points="173.56 15.28 180.64 4.67 180.95 17.4 173.56 15.28"/>
+    <polygon class="cls-4" points="188.36 15.28 181.28 4.67 180.95 17.4 188.36 15.28"/>
+  </g>
+</svg>

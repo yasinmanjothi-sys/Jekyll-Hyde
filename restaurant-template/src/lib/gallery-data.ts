@@ -1,0 +1,23 @@
+export const galleryImages = [
+    "/gallery/SaveClip.App_504512141_17865825480423442_6797398317518688649_n.jpg.webp",
+    "/gallery/SaveClip.App_517781778_17865097098423442_5245839427777466970_n.jpg.webp",
+    "/gallery/SaveClip.App_530842580_17869259760423442_1572941557786093652_n.jpg.webp",
+    "/gallery/SaveClip.App_538889711_17870933589423442_1292912256921790733_n.jpg.webp",
+    "/gallery/SaveClip.App_539293946_17870943018423442_3819510449548812844_n.jpg.webp",
+    "/gallery/SaveClip.App_540331310_17871323082423442_401654009219333247_n.jpg.webp",
+    "/gallery/SaveClip.App_549294383_17874014466423442_3961080180647487470_n.jpg.webp",
+    "/gallery/SaveClip.App_554546469_17874703224423442_5617814481350310098_n.jpg.webp",
+    "/gallery/SaveClip.App_554734028_17874703215423442_5093220695356873989_n.jpg.webp",
+    "/gallery/Screenshot 2026-02-02 at 11.23.52.png",
+    "/gallery/Screenshot 2026-02-02 at 15.50.51.png",
+    "/gallery/Screenshot 2026-02-02 at 15.51.12.png",
+    "/gallery/Screenshot 2026-02-02 at 15.52.09.png",
+    "/gallery/Screenshot 2026-02-02 at 15.52.29.png",
+    "/gallery/Screenshot 2026-02-02 at 15.53.46.png",
+    "/gallery/Screenshot 2026-02-02 at 15.54.14.png",
+    "/gallery/Screenshot 2026-02-02 at 15.54.39.png",
+    "/gallery/Screenshot 2026-02-02 at 15.56.02.png",
+    "/gallery/Screenshot 2026-02-02 at 15.56.32.png",
+    "/gallery/Screenshot 2026-02-02 at 15.56.55.png",
+    "/gallery/Screenshot 2026-02-02 at 15.57.14.png"
+];
