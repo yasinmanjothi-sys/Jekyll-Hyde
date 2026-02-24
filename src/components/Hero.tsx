@@ -36,7 +36,7 @@ export default function Hero() {
     return (
         <section className="relative w-full h-screen bg-black overflow-hidden">
             {/* Video Background */}
-            <div className="absolute inset-0 w-full h-full">
+            <div className="absolute inset-0 w-full h-full z-0">
                 <video
                     ref={videoRef}
                     autoPlay
@@ -53,11 +53,28 @@ export default function Hero() {
                     <source src="/hero 2.mp4" type="video/mp4" />
                 </video>
                 {/* Mobile Overlay Gradient for smooth transition if needed */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden" />
             </div>
 
-            {/* Global Overlay vignette (adjust z-index or remove if it interferes with text on desktop) */}
-            {/* Kept minimal for split layout */}
+            {/* Center Logo Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="relative w-64 h-64 md:w-96 md:h-96"
+                >
+                    <Image
+                        src="/LOGOS-02.svg"
+                        alt="Jekyll & Hyde"
+                        fill
+                        className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+                        priority
+                    />
+                </motion.div>
+            </div>
+
+            {/* Global Overlay vignette */}
         </section>
     );
 }
