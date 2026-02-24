@@ -2,10 +2,14 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function SiteHeader() {
     const { scrollY } = useScroll();
+    const pathname = usePathname();
+    const isHomePage = pathname === "/";
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -46,34 +50,48 @@ export default function SiteHeader() {
     // Navbar background opacity
     const navOpacity = useTransform(scrollY, [400, 500], [0, 1]); // Fade in after hero
 
+    // Determine final values based on route
+    const finalScale = isHomePage ? currentScale : 0.12;
+    const finalY = isHomePage ? logoY : "-260px";
+    const finalNavOpacity = isHomePage ? navOpacity : 1;
+
     useEffect(() => {
         // Optional: Can add scrolling logic here if needed for other navbar elements
     }, [scrollY]);
 
     return (
         <>
-            {/* Fixed Navbar Background (appears after scroll) */}
+            {/* Fixed Navbar Background & Reserve Button (appears after scroll) */}
             <motion.div
-                style={{ opacity: navOpacity }}
-                className="fixed top-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-md z-40 border-b border-white/10"
-            />
+                style={{ opacity: finalNavOpacity }}
+                className="fixed top-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-md z-40 border-b border-white/10 flex items-center justify-end px-6 md:px-12 pointer-events-auto"
+            >
+                <Link
+                    href="/reserve"
+                    className="font-gothic text-2xl md:text-3xl text-white hover:text-red-500 transition-colors uppercase tracking-wider relative z-50 px-4 py-2 border border-transparent hover:border-red-900/50 bg-transparent hover:bg-red-900/10"
+                >
+                    Reserve
+                </Link>
+            </motion.div>
 
             {/* Logo Container - This moves from hero center to navbar */}
             <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
                 <motion.div
                     style={{
-                        scale: currentScale,
-                        y: logoY,
+                        scale: finalScale,
+                        y: finalY,
                     }}
                     className="relative w-[600px] h-[600px] origin-center will-change-transform"
                 >
-                    <Image
-                        src="/logo.png"
-                        alt="Jekyll & Hyde Logo"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
+                    <Link href="/" className="pointer-events-auto block w-full h-full">
+                        <Image
+                            src="/logo.png"
+                            alt="Jekyll & Hyde Logo"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </Link>
                 </motion.div>
             </div>
         </>
