@@ -52,13 +52,13 @@ export default function WeeklyEvents() {
                         >
 
                             {/* Image Section */}
-                            <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative transition-all duration-700 group overflow-hidden">
+                            <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative transition-all duration-700 group overflow-hidden bg-zinc-950 flex items-center justify-center p-4">
                                 {/* Overlay removed */}
                                 <Image
                                     src={event.image}
                                     alt={event.title}
                                     fill
-                                    className="object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    className="object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
                             </div>
 
