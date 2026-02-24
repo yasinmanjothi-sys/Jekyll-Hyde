@@ -77,27 +77,7 @@ export default function SiteHeader() {
                 </Link>
             </div>
 
-            {/* Logo Container - This moves from hero center to navbar */}
-            <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
-                <motion.div
-                    style={{
-                        scale: finalScale,
-                        y: finalY,
-                    }}
-                    className="relative w-[600px] h-[600px] origin-center will-change-transform"
-                >
-                    <Link href="/" className="pointer-events-auto block w-full h-full">
-                        <Image
-                            src="/LOGO LATEST.svg"
-                            alt="Jekyll & Hyde Logo"
-                            fill
-                            className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
-                            priority
-                            unoptimized
-                        />
-                    </Link>
-                </motion.div>
-            </div>
+            {/* Logo removed as requested */}
         </>
     );
 }
