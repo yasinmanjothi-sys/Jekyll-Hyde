@@ -48,12 +48,12 @@ export default function SiteHeader() {
     const currentScale = isMobile ? mobileScale : desktopScale;
 
     // Navbar background opacity
-    const navOpacity = useTransform(scrollY, [400, 500], [0, 1]); // Fade in after hero
+    const navBgOpacity = useTransform(scrollY, [400, 500], [0, 1]); // Fade in after hero
+    const finalNavBgOpacity = isHomePage ? navBgOpacity : 1;
 
     // Determine final values based on route
     const finalScale = isHomePage ? currentScale : 0.12;
     const finalY = isHomePage ? logoY : "-260px";
-    const finalNavOpacity = isHomePage ? navOpacity : 1;
 
     useEffect(() => {
         // Optional: Can add scrolling logic here if needed for other navbar elements
@@ -61,18 +61,21 @@ export default function SiteHeader() {
 
     return (
         <>
-            {/* Fixed Navbar Background & Reserve Button (appears after scroll) */}
+            {/* Fixed Navbar Background */}
             <motion.div
-                style={{ opacity: finalNavOpacity }}
-                className="fixed top-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-md z-40 border-b border-white/10 flex items-center justify-end px-6 md:px-12 pointer-events-auto"
-            >
+                style={{ opacity: finalNavBgOpacity }}
+                className="fixed top-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-md z-30 border-b border-white/10 pointer-events-none"
+            />
+
+            {/* Permanent Reserve Button Container */}
+            <div className="fixed top-0 left-0 right-0 h-20 z-40 flex items-center justify-end px-6 md:px-12 pointer-events-none pt-2">
                 <Link
                     href="/reserve"
-                    className="font-gothic text-2xl md:text-3xl text-white hover:text-red-500 transition-colors uppercase tracking-wider relative z-50 px-4 py-2 border border-transparent hover:border-red-900/50 bg-transparent hover:bg-red-900/10"
+                    className="font-gothic text-2xl md:text-3xl text-white hover:text-red-500 transition-colors uppercase tracking-wider relative px-4 py-2 border border-transparent hover:border-red-900/50 bg-transparent hover:bg-black/50 pointer-events-auto rounded backdrop-blur-sm"
                 >
                     Reserve
                 </Link>
-            </motion.div>
+            </div>
 
             {/* Logo Container - This moves from hero center to navbar */}
             <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">

@@ -34,7 +34,7 @@ export default function Location() {
                         <div className="flex items-start gap-4 hover:text-white transition-colors group">
                             <Clock className="text-yellow-600 w-6 h-6 mt-1 group-hover:scale-110 transition-transform" />
                             <div>
-                                <p className="text-white text-lg font-serif mb-1">OPERATING HOURS</p>
+                                <p className="text-white text-lg font-serif mb-1">BAR HOURS</p>
                                 <p>Tue - Sat: 6:00 PM - 1:30 AM</p>
                                 <p>(Kitchen closes at 11:00 PM)</p>
                             </div>
@@ -74,14 +74,14 @@ export default function Location() {
             {/* Right Column: The Map */}
             <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-red-900">
                 <a
-                    href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649866,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897"
+                    href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full h-full relative"
                 >
                     {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
                     <Image
-                        src="/custom_map.jpg"
+                        src="/new_map.png"
                         alt="Map to Jekyll & Hyde"
                         fill
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"

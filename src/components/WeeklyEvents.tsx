@@ -7,29 +7,29 @@ const EVENTS = [
     {
         day: "Wednesday",
         title: "Midweek Blend",
-        description: "@deejaychopstick254 teams up with a live saxophonist, weaving live jazz elements into a fluid DJ set.",
-        time: "8PM till late",
+        description: "A fluid midweek session where DJ sets intertwine with live instrumentation. Designed for after-work drinks that ease you into the night.",
+        time: "From 6:00 PM",
         image: "/events/wednesday.jpg"
     },
     {
         day: "Thursday",
         title: "Groove Town",
-        description: "Groove Town Thursdays presents Shane Gray Experience. A live, groove-driven performance filled with smooth renditions and warm melodies.",
-        time: "9:30PM till late",
-        image: "/events/thursday.jpg" // Using placeholder image with similar vibe
+        description: "An evening dedicated to live music, soulful vocals, and effortless groove. From smooth classic covers to funk-leaning rhythms and expressive individual to band sets, Thursdays are warm, social, and musically rich, the perfect build towards the weekend.",
+        time: "From 6:00 PM",
+        image: "/events/thursday.jpg"
     },
     {
         day: "Friday",
-        title: "Pop Culture",
-        description: "A high-energy back-to-back session with @savi_svai × @kirasbubble × JustKen, serving disco-leaning edits, pop remixes and dancefloor favourites.",
-        time: "9PM till late",
+        title: "Closing Rituals",
+        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
+        time: "From 6:00 PM",
         image: "/events/friday.jpg"
     },
     {
         day: "Saturday",
         title: "Sacrosanct",
-        description: "An immersive late-night journey through melodic and atmospheric sounds curated by @djdonnaccia.",
-        time: "9:30PM till late",
+        description: "A deeper, more immersive Saturday experience. House melodies, steady builds, and layered soundscapes define the night- crafted for those who appreciate progression, atmosphere, and a dancefloor that evolves with intention. High energy, but refined.",
+        time: "From 6:00 PM",
         image: "/events/saturday.jpg"
     }
 ];
@@ -37,27 +37,6 @@ const EVENTS = [
 export default function WeeklyEvents() {
     return (
         <section className="min-h-screen w-full bg-zinc-950 text-white py-24 px-6 md:px-0 overflow-hidden">
-
-            {/* Section Header */}
-            <div className="text-center mb-24 relative z-10">
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-4xl md:text-7xl font-gothic tracking-widest text-white mb-2"
-                >
-                    THIS WEEK AT
-                </motion.h2>
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-4xl md:text-7xl font-gothic tracking-widest text-red-700"
-                >
-                    JEKYLL & HYDE
-                </motion.h2>
-            </div>
-
             {/* Events List - Magazine/Editorial Layout */}
             <div className="flex flex-col w-full">
                 {EVENTS.map((event, index) => {

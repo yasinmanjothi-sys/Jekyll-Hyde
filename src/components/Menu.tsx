@@ -88,7 +88,7 @@ export default function Menu() {
                     >
                         THE MENU
                     </motion.h2>
-                    <p className="font-hand text-zinc-400 text-lg md:text-xl tracking-widest">
+                    <p className="font-mono text-zinc-400 text-lg md:text-xl tracking-[0.3em] uppercase font-bold">
                         -- UNRELEASED FLAVOURS --
                     </p>
                 </div>
@@ -104,7 +104,7 @@ export default function Menu() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id as Tab)}
-                            className={`text-xl md:text-3xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-red-500 scale-110" : "text-zinc-600 hover:text-zinc-400"
+                            className={`font-gothic text-3xl md:text-5xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-red-500 scale-110 drop-shadow-[0_0_10px_rgba(220,38,38,0.5)]" : "text-zinc-600 hover:text-zinc-400"
                                 }`}
                         >
                             {tab.label}
