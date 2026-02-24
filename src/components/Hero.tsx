@@ -56,24 +56,6 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden" />
             </div>
 
-            {/* Center Logo Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="relative w-64 h-64 md:w-96 md:h-96"
-                >
-                    <Image
-                        src="/LOGOS-02.svg"
-                        alt="Jekyll & Hyde"
-                        fill
-                        className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
-                        priority
-                    />
-                </motion.div>
-            </div>
-
             {/* Global Overlay vignette */}
         </section>
     );

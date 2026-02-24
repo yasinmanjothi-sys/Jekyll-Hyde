@@ -40,8 +40,8 @@ export default function SiteHeader() {
     // Desktop: 1.0 (600px) -> 0.12 (72px)
     // Mobile:  0.5 (300px) -> 0.12 (72px)
 
-    const desktopScale = useTransform(scrollY, [0, 500], [1, 0.12]);
-    const mobileScale = useTransform(scrollY, [0, 500], [0.5, 0.12]);
+    const desktopScale = useTransform(scrollY, [0, 500], [1.5, 0.12]);
+    const mobileScale = useTransform(scrollY, [0, 500], [0.65, 0.12]);
 
     const logoY = useTransform(scrollY, [0, 500], ["calc(50dvh - 300px)", "-260px"]);
 
@@ -88,10 +88,10 @@ export default function SiteHeader() {
                 >
                     <Link href="/" className="pointer-events-auto block w-full h-full">
                         <Image
-                            src="/logo.png"
+                            src="/LOGOS-02.svg"
                             alt="Jekyll & Hyde Logo"
                             fill
-                            className="object-contain"
+                            className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
                             priority
                         />
                     </Link>
