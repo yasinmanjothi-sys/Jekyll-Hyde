@@ -93,6 +93,7 @@ export default function SiteHeader() {
                             fill
                             className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
                             priority
+                            unoptimized
                         />
                     </Link>
                 </motion.div>
