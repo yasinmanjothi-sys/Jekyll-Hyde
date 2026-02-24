@@ -40,8 +40,8 @@ export default function SiteHeader() {
     // Desktop: 1.0 (600px) -> 0.12 (72px)
     // Mobile:  0.5 (300px) -> 0.12 (72px)
 
-    const desktopScale = useTransform(scrollY, [0, 500], [2.0, 0.15]);
-    const mobileScale = useTransform(scrollY, [0, 500], [1.0, 0.12]);
+    const desktopScale = useTransform(scrollY, [0, 500], [1.0, 0.15]);
+    const mobileScale = useTransform(scrollY, [0, 500], [0.5, 0.12]);
 
     const logoY = useTransform(scrollY, [0, 500], ["calc(50dvh - 300px)", "-260px"]);
 
