@@ -25,6 +25,11 @@ const amaticSC = Amatic_SC({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://jekyllandhydekenya.com/"),
   title: "Jekyll & Hyde | Luxury Restaurant & Thematic Bar in Westlands, Nairobi",
@@ -53,6 +58,10 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "jyvrwXxl9JBJ495DISY13H6gh_t44QAYeQCxuwHzH0M",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

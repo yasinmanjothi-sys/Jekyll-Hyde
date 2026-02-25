@@ -28,6 +28,8 @@ export default function ReservePage() {
 
                         <p className="text-zinc-400 font-mono text-sm md:text-base tracking-wider mb-8 text-center md:text-left max-w-md">
                             Book early to guarantee your place in the shadows. We accept reservations via direct call or WhatsApp message.
+                            <br /><br />
+                            Welcome to Jekyll & Hyde Nairobi, the premier destination for exclusive dining and immersive nightlife experiences. Situated conveniently near Lavington and positioned in the vibrant heart of Westlands, our thematic sanctuary offers a highly curated atmosphere perfect for an unforgettable evening. Whether you are looking to secure a VIP table for a weekend celebration, arrange an intimate dinner, or plan a private gathering, securing your reservations in advance is highly recommended. Our establishment blends masterful mixology, exceptional culinary creations, and an alternative aesthetic that stands unparalleled in the Nairobi hospitality landscape. Contact our dedicated concierge team today to design your perfect night out and confirm your spot in our highly sought-after venue.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">
