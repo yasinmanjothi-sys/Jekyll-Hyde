@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
+import ReservationButtons from "./ReservationButtons";
 
 export const metadata: Metadata = {
     title: "Reservations | Jekyll & Hyde Westlands, Nairobi",
@@ -30,9 +31,9 @@ export default function ReservePage() {
                         </h1>
 
                         <p className="text-zinc-400 font-mono text-sm md:text-base tracking-wider mb-8 text-center md:text-left max-w-md">
-                            Book early to guarantee your place in the shadows. We accept reservations via direct call or WhatsApp message.
+                            Book early to guarantee your place in the shadows.
                             <br /><br />
-                            Welcome to Jekyll & Hyde Nairobi, the premier destination for exclusive dining and immersive nightlife experiences. Situated conveniently near Lavington and positioned in the vibrant heart of Westlands, our thematic sanctuary offers a highly curated atmosphere perfect for an unforgettable evening. Whether you are looking to secure a VIP table for a weekend celebration, arrange an intimate dinner, or plan a private gathering, securing your reservations in advance is highly recommended. Our establishment blends masterful mixology, exceptional culinary creations, and an alternative aesthetic that stands unparalleled in the Nairobi hospitality landscape. Contact our dedicated concierge team today to design your perfect night out and confirm your spot in our highly sought-after venue.
+                            Jekyll & Hyde Nairobi is the premier destination for exclusive dining and immersive nightlife in Westlands, near Lavington. We highly recommend securing table reservations in advance for our highly sought-after venue.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">
@@ -55,36 +56,7 @@ export default function ReservePage() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-6 w-full">
-                            <a
-                                href="tel:+254707370028"
-                                className="group relative flex flex-col items-center justify-center gap-1 border border-zinc-700 bg-black/50 px-8 py-5 hover:bg-white hover:text-black hover:border-white transition-all duration-500 overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-red-950/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                                <div className="flex items-center gap-4 z-10">
-                                    <Phone className="w-5 h-5 text-white group-hover:text-black transition-colors" />
-                                    <span className="font-gothic text-3xl uppercase tracking-widest group-hover:drop-shadow-md">
-                                        Reserve via Call
-                                    </span>
-                                </div>
-                                <span className="font-mono text-xs tracking-widest text-zinc-400 group-hover:text-zinc-700 z-10">
-                                    +254 707 370 028
-                                </span>
-                            </a>
-
-                            <a
-                                href="https://wa.me/254707370028"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative flex items-center justify-center gap-4 border border-green-900/50 bg-green-950/10 px-8 py-6 hover:bg-green-600 hover:text-white hover:border-green-500 transition-all duration-500 overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-green-900/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                                <MessageCircle className="w-6 h-6 z-10 text-green-500 group-hover:text-white transition-colors" />
-                                <span className="font-gothic text-3xl uppercase tracking-widest z-10 group-hover:drop-shadow-md">
-                                    Reserve via WhatsApp
-                                </span>
-                            </a>
-                        </div>
+                        <ReservationButtons />
                     </div>
 
                 </div>
