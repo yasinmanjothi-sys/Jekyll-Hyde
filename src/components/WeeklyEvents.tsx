@@ -56,7 +56,7 @@ export default function WeeklyEvents() {
                                 {/* Overlay removed */}
                                 <Image
                                     src={event.image}
-                                    alt={event.title}
+                                    alt={`${event.title} - Jekyll & Hyde Events Nairobi`}
                                     fill
                                     className="object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
@@ -70,9 +70,9 @@ export default function WeeklyEvents() {
                                         {event.day}
                                     </span>
 
-                                    <h3 className="text-5xl md:text-8xl font-gothic text-white mb-6 uppercase leading-[0.9]">
+                                    <h2 className="text-5xl md:text-8xl font-gothic text-white mb-6 uppercase leading-[0.9]">
                                         {event.title}
-                                    </h3>
+                                    </h2>
 
                                     <p className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-8">
                                         {event.description}

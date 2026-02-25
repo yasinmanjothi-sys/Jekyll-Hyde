@@ -1,10 +1,17 @@
+import type { Metadata } from "next";
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 
+export const metadata: Metadata = {
+    title: "Reservations | Jekyll & Hyde Westlands, Nairobi",
+    description: "Secure your ritual at Jekyll & Hyde. Call or WhatsApp to book your table at Nairobi's premier speakeasy and dining venue near Naivas Westlands.",
+};
+
 export default function ReservePage() {
     return (
         <main className="min-h-screen bg-[#0a0a0a] text-zinc-100 flex flex-col selection:bg-red-900/50">
+            <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>
             <SiteHeader />
 
             {/* Top Spacer for Fixed Navbar */}

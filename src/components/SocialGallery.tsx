@@ -42,7 +42,7 @@ export default function SocialGallery() {
                                 >
                                     <Image
                                         src={src}
-                                        alt="Gallery image"
+                                        alt="Jekyll & Hyde Nairobi Gallery image"
                                         fill
                                         className="object-cover"
                                     />

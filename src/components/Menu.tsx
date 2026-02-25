@@ -86,7 +86,7 @@ export default function Menu() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="text-6xl md:text-8xl font-gothic text-red-600 mb-4 tracking-widest drop-shadow-[0_0_10px_rgba(220,38,38,0.5)]"
                     >
-                        THE MENU
+                        THE MENU <span className="sr-only">- Dining near Artcaffé Gastro Bar & Drinks near 254 Beer District</span>
                     </motion.h2>
                     <p className="font-mono text-zinc-400 text-lg md:text-xl tracking-[0.3em] uppercase font-bold">
                         -- UNRELEASED FLAVOURS --

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pirata_One, Amatic_SC } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,13 +26,20 @@ const amaticSC = Amatic_SC({
 });
 
 export const metadata: Metadata = {
-  title: "Jekyll & Hyde | Nairobi",
-  description: "Unreleased flavours. Unique hospitality. A cocktail bar & kitchen in Westlands, Nairobi.",
-  keywords: ["Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Restaurant"],
+  metadataBase: new URL("https://jekyllandhydekenya.com/"),
+  title: "Jekyll & Hyde | Luxury Restaurant & Thematic Bar in Westlands, Nairobi",
+  description: "Experience unreleased flavours at Jekyll & Hyde, a premier cocktail bar and kitchen in Westlands, Nairobi. The ultimate speakeasy and alternative nightlife near The Mall and Naivas Westlands.",
+  keywords: [
+    "Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Restaurant",
+    "Restaurant near The Mall Westlands", "Bar near Naivas Westlands",
+    "Drinks near 254 Beer District", "Dining near Artcaffé Gastro Bar",
+    "Thematic bar Westlands", "Speakeasy Nairobi", "Alternative nightlife Nairobi"
+  ],
   authors: [{ name: "Jekyll & Hyde" }],
   openGraph: {
-    title: "Jekyll & Hyde | Nairobi",
-    description: "Unreleased flavours. Unique hospitality.",
+    title: "Jekyll & Hyde | Luxury Restaurant & Thematic Bar Nairobi",
+    description: "Unreleased flavours. Unique hospitality. Dive into Nairobi's best alternative nightlife experience.",
+    url: "https://jekyllandhydekenya.com/",
     type: "website",
     locale: "en_KE",
     images: [
@@ -39,7 +47,7 @@ export const metadata: Metadata = {
         url: "/map_screenshot.png", // Using the map as a placeholder OG image
         width: 1200,
         height: 630,
-        alt: "Jekyll & Hyde Nairobi",
+        alt: "Jekyll & Hyde Nairobi Location Map",
       },
     ],
   },
@@ -56,6 +64,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${pirataOne.variable} ${amaticSC.variable} antialiased bg-black text-white`}
       >
         {children}
+        <GoogleAnalytics gaId="G-KSNDZHYJVY" />
       </body>
     </html>
   );

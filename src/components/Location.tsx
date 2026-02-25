@@ -16,7 +16,7 @@ export default function Location() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-5xl md:text-7xl font-gothic mb-12 text-white">FIND THE CURE</h2>
+                    <h2 className="text-5xl md:text-7xl font-gothic mb-12 text-white">FIND THE CURE <span className="sr-only">- Speakeasy and Thematic Bar near The Mall Westlands</span></h2>
 
                     <div className="space-y-10 font-mono text-sm md:text-base tracking-wider text-zinc-400">
 
@@ -82,7 +82,7 @@ export default function Location() {
                     {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
                     <Image
                         src="/new_map.png"
-                        alt="Map to Jekyll & Hyde"
+                        alt="Map to Jekyll & Hyde - High-End Restaurant and Bar near The Mall Westlands"
                         fill
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
