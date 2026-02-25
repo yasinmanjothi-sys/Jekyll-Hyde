@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "https://jekyllandhydekenya.com/",
+  },
 };
 
 export default function RootLayout({

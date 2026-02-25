@@ -6,6 +6,9 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata: Metadata = {
     title: "Reservations | Jekyll & Hyde Westlands, Nairobi",
     description: "Secure your ritual at Jekyll & Hyde. Call or WhatsApp to book your table at Nairobi's premier speakeasy and dining venue near Naivas Westlands.",
+    alternates: {
+        canonical: "https://jekyllandhydekenya.com/reserve",
+    },
 };
 
 export default function ReservePage() {
