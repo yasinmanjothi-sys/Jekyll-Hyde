@@ -8,6 +8,7 @@
   /* "Hyde" Accents */
   --accent-red: #7f1d1d;
   --accent-gold: #c0a062;
+  --burgundy: #850529;
 }
 
 @theme inline {
@@ -15,10 +16,10 @@
   --color-foreground: var(--foreground);
   --color-accent-red: var(--accent-red);
   --color-accent-gold: var(--accent-gold);
+  --color-burgundy: var(--burgundy);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-gothic: var(--font-pirata);
   --font-gothic: var(--font-pirata);
   --font-hand: var(--font-amatic);
 }
@@ -35,4 +36,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-texture-burgundy {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/burgundy-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 }

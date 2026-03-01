@@ -22,7 +22,7 @@ export default function Location() {
 
                         {/* Address */}
                         <div className="flex items-start gap-4 hover:text-white transition-colors group">
-                            <MapPin className="text-red-700 w-6 h-6 mt-1 group-hover:scale-110 transition-transform" />
+                            <MapPin className="text-burgundy w-6 h-6 mt-1 group-hover:scale-110 transition-transform" />
                             <div>
                                 <p className="text-white text-lg font-serif mb-1">HQ</p>
                                 <p>Westlands Arcade Plaza</p>
@@ -72,7 +72,7 @@ export default function Location() {
             </div>
 
             {/* Right Column: The Map */}
-            <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-red-900">
+            <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-burgundy/40">
                 <a
                     href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
@@ -88,12 +88,12 @@ export default function Location() {
                     />
 
                     {/* "Hyde" Overlay (Red Tint on Hover) */}
-                    <div className="absolute inset-0 bg-red-900/0 mix-blend-multiply group-hover:bg-red-900/60 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
 
                     {/* CTA Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="bg-black/80 px-8 py-4 border border-red-600 backdrop-blur-sm">
-                            <span className="font-gothic text-2xl text-red-500 tracking-widest">OPEN MAPS</span>
+                        <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
+                            <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN MAPS</span>
                         </div>
                     </div>
                 </a>

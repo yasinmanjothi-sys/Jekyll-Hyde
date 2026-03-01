@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ReservePage() {
     return (
-        <main className="min-h-screen bg-[#0a0a0a] text-zinc-100 flex flex-col selection:bg-red-900/50">
+        <main className="min-h-screen bg-[#0a0a0a] text-zinc-100 flex flex-col selection:bg-burgundy/50">
             <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>
             <SiteHeader />
 
@@ -38,7 +38,7 @@ export default function ReservePage() {
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">
                             <div className="flex items-start gap-4">
-                                <MapPin className="text-red-700 w-5 h-5 mt-0.5" />
+                                <MapPin className="text-burgundy w-5 h-5 mt-0.5" />
                                 <div className="text-center md:text-left">
                                     <p className="text-white font-serif mb-1 uppercase tracking-widest text-base">Location</p>
                                     <p>Westlands Arcade Plaza</p>
@@ -62,7 +62,7 @@ export default function ReservePage() {
                 </div>
 
                 {/* Right Column: The Map */}
-                <div className="w-full md:w-1/2 min-h-[50vh] relative group overflow-hidden bg-red-900 mt-auto md:mt-0">
+                <div className="w-full md:w-1/2 min-h-[50vh] relative group overflow-hidden bg-burgundy/40 mt-auto md:mt-0">
                     <a
                         href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
@@ -78,12 +78,12 @@ export default function ReservePage() {
                         />
 
                         {/* "Hyde" Overlay (Red Tint on Hover) */}
-                        <div className="absolute inset-0 bg-red-900/0 mix-blend-multiply group-hover:bg-red-900/60 transition-colors duration-500" />
+                        <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
 
                         {/* CTA Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <div className="bg-black/80 px-8 py-4 border border-red-600 backdrop-blur-sm">
-                                <span className="font-gothic text-2xl text-red-500 tracking-widest">OPEN IN MAPS</span>
+                            <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
+                                <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN IN MAPS</span>
                             </div>
                         </div>
                     </a>

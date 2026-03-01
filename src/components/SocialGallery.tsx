@@ -22,7 +22,7 @@ export default function SocialGallery() {
                 {/* Header / CTA */}
                 <div className="container mx-auto px-4 mb-8 text-center relative z-10">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-gothic text-white mb-2 tracking-widest uppercase transition-colors group-hover:text-red-600">
+                        <h2 className="text-3xl md:text-5xl font-gothic text-white mb-2 tracking-widest uppercase transition-colors group-hover:text-burgundy">
                             Social Alchemy
                         </h2>
                         <p className="font-mono text-zinc-500 text-xs tracking-[0.2em] uppercase group-hover:text-zinc-300 transition-colors">

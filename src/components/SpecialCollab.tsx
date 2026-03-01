@@ -39,7 +39,7 @@ export default function SpecialCollab() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-4xl md:text-7xl font-gothic tracking-widest text-red-700"
+                    className="text-4xl md:text-7xl font-gothic tracking-widest text-texture-burgundy"
                 >
                     JEKYLL & HYDE
                 </motion.h2>
@@ -55,7 +55,7 @@ export default function SpecialCollab() {
                     viewport={{ once: true }}
                     className="w-full md:w-1/2 flex flex-col items-start text-left order-2 md:order-1"
                 >
-                    <span className="text-red-600 font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-red-900/50 px-4 py-2">
+                    <span className="text-burgundy font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-burgundy/50 px-4 py-2">
                         Special Event
                     </span>
 
@@ -74,7 +74,7 @@ export default function SpecialCollab() {
                         <p>
                             This Saturday, we swap talents. EZO guests will enjoy J&H signature cocktails from your favourite bartender, while one of EZO’s finest bartenders takes over the J&H bar.
                         </p>
-                        <p className="text-red-500 font-mono text-xs md:text-sm tracking-widest uppercase mt-4 block">
+                        <p className="text-burgundy font-mono text-xs md:text-sm tracking-widest uppercase mt-4 block">
                             The special menu will be running at both locations from 6pm onwards.
                         </p>
                     </div>
@@ -94,7 +94,7 @@ export default function SpecialCollab() {
                         href="/reserve"
                         className="group relative inline-flex items-center justify-center gap-4 border border-zinc-700 bg-black/50 px-10 py-5 hover:bg-white hover:text-black hover:border-white transition-all duration-500 overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-red-950/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                        <div className="absolute inset-0 bg-burgundy/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                         <span className="font-gothic text-2xl uppercase tracking-widest z-10 group-hover:drop-shadow-md">
                             Reserve Now
                         </span>
@@ -115,7 +115,7 @@ export default function SpecialCollab() {
                         and aspect-[9/16] enforces the portrait layout 
                     */}
                     <div className="relative w-full max-w-[450px] aspect-[9/16] rounded-xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(220,38,38,0.1)] group">
-                        <div className="absolute inset-0 bg-red-900/10 mix-blend-multiply flex z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
+                        <div className="absolute inset-0 bg-burgundy/10 mix-blend-multiply flex z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
 
                         <video
                             ref={videoRef}

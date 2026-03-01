@@ -78,10 +78,12 @@ export default function WeeklyEvents() {
                                         {event.description}
                                     </p>
 
-                                    <div className="inline-block border border-red-900/50 px-4 py-2 rounded-full">
-                                        <span className="font-mono text-red-500 text-sm tracking-widest">
-                                            {event.time}
-                                        </span>
+                                    <div className="mt-8 pt-6 border-t border-zinc-800 flex justify-between items-center">
+                                        <div className="inline-block border border-burgundy/50 px-4 py-2 rounded-full">
+                                            <span className="font-mono text-burgundy text-sm tracking-widest">
+                                                {event.time}
+                                            </span>
+                                        </div>
                                     </div>
 
                                 </div>

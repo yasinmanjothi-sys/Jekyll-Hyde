@@ -30,7 +30,7 @@ export default function GalleryPage() {
                     transition={{ duration: 0.8 }}
                     className="text-center"
                 >
-                    <h1 className="text-5xl md:text-9xl font-gothic text-red-600 mb-6 tracking-widest uppercase">
+                    <h1 className="text-5xl md:text-9xl font-gothic text-texture-burgundy mb-6 tracking-widest uppercase">
                         Social Alchemy
                     </h1>
                     <p className="font-mono text-zinc-500 text-sm md:text-base tracking-[0.2em] uppercase">

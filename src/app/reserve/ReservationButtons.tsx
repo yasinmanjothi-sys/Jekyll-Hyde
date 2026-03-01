@@ -20,7 +20,7 @@ export default function ReservationButtons() {
                 onClick={() => trackBooking('Call')}
                 className="group relative flex flex-col items-center justify-center gap-1 border border-zinc-700 bg-black/50 px-8 py-5 hover:bg-white hover:text-black hover:border-white transition-all duration-500 overflow-hidden"
             >
-                <div className="absolute inset-0 bg-red-950/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                <div className="absolute inset-0 bg-burgundy/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                 <div className="flex items-center gap-4 z-10">
                     <Phone className="w-5 h-5 text-white group-hover:text-black transition-colors" />
                     <span className="font-gothic text-3xl uppercase tracking-widest group-hover:drop-shadow-md">

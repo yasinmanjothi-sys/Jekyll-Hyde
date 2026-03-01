@@ -13,7 +13,7 @@ export default function Footer() {
                     href="https://www.instagram.com/jekyllandhyde.ke/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-red-600 transition-colors duration-300"
+                    className="hover:text-burgundy transition-colors duration-300"
                 >
                     <Instagram className="w-6 h-6" />
                     <span className="sr-only">Instagram</span>

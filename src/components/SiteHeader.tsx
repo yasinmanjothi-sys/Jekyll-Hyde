@@ -71,7 +71,7 @@ export default function SiteHeader() {
             <div className="fixed top-0 left-0 right-0 h-20 z-40 flex items-center justify-end px-6 md:px-12 pointer-events-none pt-2">
                 <Link
                     href="/reserve"
-                    className="font-gothic text-2xl md:text-3xl text-white hover:text-red-500 transition-colors uppercase tracking-wider relative px-4 py-2 border border-transparent hover:border-red-900/50 bg-transparent hover:bg-black/50 pointer-events-auto rounded backdrop-blur-sm"
+                    className="font-gothic text-2xl md:text-3xl text-white hover:text-burgundy-500 transition-colors uppercase tracking-wider relative px-4 py-2 border border-transparent hover:border-burgundy-900/50 bg-transparent hover:bg-black/50 pointer-events-auto rounded backdrop-blur-sm"
                 >
                     Reserve
                 </Link>

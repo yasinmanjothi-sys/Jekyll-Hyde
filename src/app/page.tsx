@@ -6,6 +6,7 @@ import Location from "@/components/Location";
 import SpecialCollab from "@/components/SpecialCollab";
 import Footer from "@/components/Footer";
 import SocialGallery from "@/components/SocialGallery";
+import AudioAlchemy from "@/components/AudioAlchemy";
 
 import SiteHeader from "@/components/SiteHeader";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <SpecialCollab />
       <WeeklyEvents />
+      <AudioAlchemy />
       <SocialGallery />
       <Menu />
       <Location />
