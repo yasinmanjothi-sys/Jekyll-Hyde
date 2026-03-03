@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Menu from "@/components/Menu";
 import WeeklyEvents from "@/components/WeeklyEvents";
 import Location from "@/components/Location";
-import SpecialCollab from "@/components/SpecialCollab";
 import Footer from "@/components/Footer";
 import SocialGallery from "@/components/SocialGallery";
 import AudioAlchemy from "@/components/AudioAlchemy";
@@ -21,7 +20,6 @@ export default function Home() {
       <h1 className="sr-only">Jekyll & Hyde - Luxury Restaurant and Thematic Cocktail Bar in Westlands, Nairobi</h1>
       <SiteHeader />
       <Hero />
-      <SpecialCollab />
       <WeeklyEvents />
       <AudioAlchemy />
       <SocialGallery />
