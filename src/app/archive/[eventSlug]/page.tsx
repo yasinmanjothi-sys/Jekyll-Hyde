@@ -7,6 +7,7 @@ export function generateStaticParams() {
         { eventSlug: 'thursday' },
         { eventSlug: 'friday' },
         { eventSlug: 'saturday' },
+        { eventSlug: 'closing-rituals' },
     ];
 }
 

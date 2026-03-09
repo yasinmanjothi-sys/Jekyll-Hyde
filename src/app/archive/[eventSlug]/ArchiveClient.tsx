@@ -8,11 +8,15 @@ import { ArrowLeft, X } from "lucide-react";
 import { archivePosters, EventSlug, ArchivePoster } from "@/lib/posters-data";
 
 const eventInfo: Record<string, { title: string, subtitle: string }> = {
-    wednesday: { title: "Midweek Blend", subtitle: "Archive" },
-    thursday: { title: "Groove Town", subtitle: "Archive" },
-    friday: { title: "Pop Friday", subtitle: "Archive" },
-    saturday: { title: "Sacrosanct", subtitle: "Archive" }
+    wednesday: { title: "Midweek Blend", subtitle: "Past Events" },
+    thursday: { title: "Groove Town", subtitle: "Past Events" },
+    friday: { title: "Pop Culture", subtitle: "Past Events" },
+    saturday: { title: "Sacrosanct", subtitle: "Past Events" },
+    "closing-rituals": { title: "Closing Rituals", subtitle: "Past Events" },
+    "collaboration-events": { title: "Collaboration Events", subtitle: "Past Events" }
 };
+
+const isVideo = (url: string) => url.toLowerCase().endsWith('.mp4') || url.toLowerCase().endsWith('.webm');
 
 export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
     const [selectedImage, setSelectedImage] = useState<ArchivePoster | null>(null);
@@ -21,8 +25,8 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
     if (!eventSlug || !eventInfo[eventSlug]) {
         return (
             <div className="min-h-screen bg-zinc-950 flex items-center justify-center text-white">
-                <Link href="/" className="hover:text-burgundy font-mono uppercase tracking-widest text-sm">
-                    Return to Home
+                <Link href={`/#event-${eventSlug}`} className="hover:text-burgundy font-mono uppercase tracking-widest text-sm">
+                    Return to Events
                 </Link>
             </div>
         );
@@ -37,7 +41,7 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
 
             {/* Nav Back */}
             <div className="fixed top-6 left-6 z-40">
-                <Link href="/#events" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
+                <Link href={`/#event-${eventSlug}`} className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
                     <div className="p-2 border border-zinc-800 bg-black/50 backdrop-blur-sm rounded-full group-hover:border-white/50 transition-colors">
                         <ArrowLeft className="w-5 h-5" />
                     </div>
@@ -68,8 +72,7 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
             <div className="container mx-auto px-4">
                 {posters.length === 0 ? (
                     <div className="text-center py-20 text-zinc-600 font-sans tracking-wide">
-                        <p>No archive posters available for this event yet.</p>
-                        <p className="text-xs mt-2 uppercase">Please run `node scripts/generate-archive.js`</p>
+                        <p>No past posters available for this event yet.</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
@@ -83,12 +86,23 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
                                 className="relative aspect-[4/5] group overflow-hidden bg-zinc-900 border border-zinc-800 cursor-none"
                                 onClick={() => setSelectedImage(poster)}
                             >
-                                <Image
-                                    src={poster.image}
-                                    alt={poster.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                                {isVideo(poster.image) ? (
+                                    <video
+                                        src={poster.image}
+                                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                    />
+                                ) : (
+                                    <Image
+                                        src={poster.image}
+                                        alt={poster.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                )}
 
                                 {/* Hover Overlay */}
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
@@ -125,12 +139,22 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
                             className="relative w-full max-w-4xl h-[85vh] md:h-full cursor-auto"
                             onClick={(e) => e.stopPropagation()} // Prevent close when clicking the image itself
                         >
-                            <Image
-                                src={selectedImage.image}
-                                alt={selectedImage.title}
-                                fill
-                                className="object-contain drop-shadow-2xl"
-                            />
+                            {isVideo(selectedImage.image) ? (
+                                <video
+                                    src={selectedImage.image}
+                                    className="object-contain w-full h-full drop-shadow-2xl"
+                                    controls
+                                    autoPlay
+                                    playsInline
+                                />
+                            ) : (
+                                <Image
+                                    src={selectedImage.image}
+                                    alt={selectedImage.title}
+                                    fill
+                                    className="object-contain drop-shadow-2xl"
+                                />
+                            )}
                         </motion.div>
 
                         {/* Title at the bottom */}

@@ -2,137 +2,83 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function SpecialCollab() {
-    const videoRef = useRef<HTMLVideoElement>(null);
-
-    // Force autoplay on mount to bypass some browser restrictions
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.setAttribute("muted", "");
-            videoRef.current.setAttribute("playsinline", "");
-            videoRef.current.muted = true;
-
-            const playPromise = videoRef.current.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Autoplay prevented:", error);
-                });
-            }
-        }
-    }, []);
-
     return (
-        <section className="min-h-screen w-full bg-black text-white py-24 px-6 md:px-0 flex flex-col items-center justify-center overflow-hidden border-y border-zinc-900">
-            {/* Section Header */}
-            <div className="text-center mb-24 relative z-10 w-full">
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-4xl md:text-7xl font-gothic tracking-widest text-white mb-2"
-                >
-                    THIS WEEK AT
-                </motion.h2>
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-4xl md:text-7xl font-gothic tracking-widest text-texture-burgundy"
-                >
-                    JEKYLL & HYDE
-                </motion.h2>
-            </div>
+        <div id="event-collaboration-events" className="scroll-mt-32 w-full">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ margin: "-100px" }}
+                className="flex flex-col md:flex-row w-full min-h-[60vh] md:min-h-[80vh] items-center"
+            >
 
-            <div className="max-w-[1400px] w-full mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                {/* Image Section (Matches Image Section behavior in WeeklyEvents) */}
+                <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative transition-all duration-700 group overflow-hidden bg-zinc-950 flex items-center justify-center p-4">
+                    <Image
+                        src="/archive/collaboration-events/2_1pm to 10pm.jpg"
+                        alt="J&H x Not A Thing Brazilian Carnival Poster"
+                        fill
+                        className="object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                </div>
 
                 {/* Text Content */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="w-full md:w-1/2 flex flex-col items-start text-left order-2 md:order-1"
-                >
-                    <span className="text-burgundy font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-burgundy/50 px-4 py-2">
-                        Special Event
-                    </span>
+                <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center bg-zinc-950 relative z-20 border-y border-zinc-900 md:border-none">
+                    <div className="flex flex-col md:items-end text-center md:text-right">
 
-                    {/* Event Details go here */}
-                    {/* Event Details go here */}
-                    <h2 className="text-4xl md:text-7xl font-gothic mb-6 leading-[0.9] uppercase tracking-wide">
-                        J&H <span className="text-zinc-500 font-sans mx-2 text-2xl md:text-4xl lowercase">x</span> EZO <br />
-                        <span className="text-zinc-500 text-3xl md:text-5xl mt-2 block">Bartenders’ Day</span>
-                        <span className="text-zinc-500 text-3xl md:text-5xl mt-2 block">Takeover</span>
-                    </h2>
-
-                    <div className="font-sans text-zinc-400 text-sm md:text-base max-w-md leading-relaxed mb-6 space-y-4">
-                        <p>
-                            In celebration of International Bartenders’ Day, we’re teaming up with EZO for a special collaboration.
-                        </p>
-                        <p>
-                            This Saturday, we swap talents. EZO guests will enjoy J&H signature cocktails from your favourite bartender, while one of EZO’s finest bartenders takes over the J&H bar.
-                        </p>
-                        <p className="text-burgundy font-mono text-xs md:text-sm tracking-widest uppercase mt-4 block">
-                            The special menu will be running at both locations from 6pm onwards.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                        <div className="flex flex-col">
-                            <span className="text-zinc-500 font-serif text-sm uppercase tracking-widest mb-1">Date</span>
-                            <span className="font-mono text-white text-lg">Saturday Night</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-zinc-500 font-serif text-sm uppercase tracking-widest mb-1">Time</span>
-                            <span className="font-mono text-white text-lg">From 6:00 PM</span>
-                        </div>
-                    </div>
-
-                    <Link
-                        href="/reserve"
-                        className="group relative inline-flex items-center justify-center gap-4 border border-zinc-700 bg-black/50 px-10 py-5 hover:bg-white hover:text-black hover:border-white transition-all duration-500 overflow-hidden"
-                    >
-                        <div className="absolute inset-0 bg-burgundy/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                        <span className="font-gothic text-2xl uppercase tracking-widest z-10 group-hover:drop-shadow-md">
-                            Reserve Now
+                        <span className="text-burgundy font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-burgundy/50 px-4 py-2 self-center md:self-end">
+                            Special Event
                         </span>
-                    </Link>
-                </motion.div>
 
-                {/* Video Container (Portrait 9:16) */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="w-full md:w-1/2 flex justify-center order-1 md:order-2"
-                >
-                    {/* 
-                        Uses an aspect ratio trick. 
-                        Max width ensures it doesn't get ridiculously large on huge monitors, 
-                        and aspect-[9/16] enforces the portrait layout 
-                    */}
-                    <div className="relative w-full max-w-[450px] aspect-[9/16] rounded-xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(220,38,38,0.1)] group">
-                        <div className="absolute inset-0 bg-burgundy/10 mix-blend-multiply flex z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
+                        <h2 className="text-5xl md:text-8xl font-gothic text-white mb-6 uppercase leading-[0.9]">
+                            J&H <span className="text-zinc-500 font-sans mx-1 text-3xl md:text-5xl lowercase">x</span> NOT A THING <br />
+                            <span className="text-zinc-500 text-4xl md:text-6xl mt-2 block">Brazilian Carnival</span>
+                        </h2>
 
-                        <video
-                            ref={videoRef}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src="/events/special-collab.mp4" type="video/mp4" />
-                            {/* Fallback image if video fails or before it loads */}
-                            Your browser does not support the video tag.
-                        </video>
+                        <div className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-8 space-y-4">
+                            <p>
+                                In collaboration with Not A Thing, we're bringing the vibrant spirit of Brazilian Carnival to the heart of Nairobi.
+                            </p>
+                            <p>
+                                Expect samba rhythms, carnival energy, authentic Brazilian food, and the colours of Rio taking over Jekyll & Hyde for a Sunday celebration like no other.
+                            </p>
+                        </div>
+
+                        <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center w-full">
+
+                            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                                <span className="text-zinc-500 font-serif text-sm uppercase tracking-widest mb-1">Time</span>
+                                <span className="font-mono text-white text-lg">Sun • 1:00 PM</span>
+                            </div>
+
+                            <div className="flex gap-4 items-center">
+                                <Link
+                                    href="/archive/collaboration-events"
+                                    className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm"
+                                >
+                                    <span className="font-mono uppercase tracking-widest border-b border-transparent group-hover:border-white transition-colors">
+                                        Past Events
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/reserve"
+                                    className="group inline-flex items-center justify-center gap-4 bg-black/50 px-4 py-2 hover:bg-white hover:text-black hover:border-white transition-all duration-500 overflow-hidden"
+                                >
+                                    <span className="font-gothic text-xl uppercase tracking-widest z-10 group-hover:drop-shadow-md">
+                                        Reserve
+                                    </span>
+                                </Link>
+                            </div>
+
+                        </div>
                     </div>
-                </motion.div>
+                </div>
 
-            </div>
-        </section>
+            </motion.div>
+        </div>
     );
 }
