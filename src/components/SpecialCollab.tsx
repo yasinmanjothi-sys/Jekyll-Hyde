@@ -55,14 +55,6 @@ export default function SpecialCollab() {
                             </div>
 
                             <div className="flex gap-4 items-center">
-                                <Link
-                                    href="/archive/collaboration-events"
-                                    className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm"
-                                >
-                                    <span className="font-mono uppercase tracking-widest border-b border-transparent group-hover:border-white transition-colors">
-                                        Past Events
-                                    </span>
-                                </Link>
 
                                 <Link
                                     href="/reserve"
