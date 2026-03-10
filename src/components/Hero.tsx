@@ -50,7 +50,7 @@ export default function Hero() {
                         transform: "translate3d(0, 0, 0)"
                     }}
                 >
-                    <source src="/hero 2.mp4" type="video/mp4" />
+                    <source src="/hero2.mp4" type="video/mp4" />
                 </video>
                 {/* Mobile Overlay Gradient for smooth transition if needed */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden" />

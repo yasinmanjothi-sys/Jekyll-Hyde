@@ -88,7 +88,7 @@ export default function SiteHeader() {
                 >
                     <Link href="/" className="pointer-events-auto block w-full h-full">
                         <Image
-                            src="/LOGO FINAL.svg"
+                            src="/LOGO-FINAL.svg"
                             alt="Jekyll & Hyde Official Logo - Luxury Restaurant & Thematic Cocktail Bar in Westlands, Nairobi"
                             fill
                             className="object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"

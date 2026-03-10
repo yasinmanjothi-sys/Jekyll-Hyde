@@ -14,6 +14,12 @@ export type EventSlug = 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'clos
 export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     "wednesday": [
         {
+            "id": "wednesday-6",
+            "title": "7_8pm",
+            "time": "8PM",
+            "image": "/archive/wednesday/7_8pm.PNG"
+        },
+        {
             "id": "wednesday-0",
             "title": " 6 _8pm",
             "time": "8PM",
