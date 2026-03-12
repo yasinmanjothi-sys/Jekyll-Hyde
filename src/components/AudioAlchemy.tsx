@@ -1,16 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { djSets, DJSet } from "@/lib/dj-sets-data";
 
 export default function AudioAlchemy() {
     const [selectedSet, setSelectedSet] = useState<DJSet | null>(null);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     // Filter out sets that don't have data, just in case
     const displaySets = djSets;
 
+    const scroll = (direction: "left" | "right") => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = window.innerWidth > 768 ? 500 : 320; // Match approximate card width
+            const targetScroll = 
+                scrollContainerRef.current.scrollLeft + 
+                (direction === "left" ? -scrollAmount : scrollAmount);
+            
+            scrollContainerRef.current.scrollTo({
+                left: targetScroll,
+                behavior: "smooth"
+            });
+        }
+    };
+
     return (
-        <section className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative">
+        <section className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section">
             <div className="container mx-auto px-4 mb-8 text-center relative z-10">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-gothic text-white mb-2 tracking-widest uppercase">
@@ -22,9 +38,32 @@ export default function AudioAlchemy() {
                 </div>
             </div>
 
+            {/* Navigation Buttons */}
+            {displaySets.length > 0 && (
+                <>
+                    <button 
+                        onClick={() => scroll("left")}
+                        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/80 border border-zinc-800 flex items-center justify-center text-white hover:bg-zinc-900 hover:border-zinc-700 hover:scale-105 transition-all duration-300 opacity-0 group-hover/section:opacity-100 hidden md:flex"
+                        aria-label="Scroll left"
+                    >
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button 
+                        onClick={() => scroll("right")}
+                        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/80 border border-zinc-800 flex items-center justify-center text-white hover:bg-zinc-900 hover:border-zinc-700 hover:scale-105 transition-all duration-300 opacity-0 group-hover/section:opacity-100 hidden md:flex"
+                        aria-label="Scroll right"
+                    >
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
+                </>
+            )}
+
             {/* Horizontal Scroll Container */}
-            <div className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8">
-                <div className="flex gap-4 px-4 md:px-8 w-max mx-auto">
+            <div 
+                ref={scrollContainerRef}
+                className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
+            >
+                <div className="flex gap-4 px-4 md:px-8 w-max mx-auto md:mx-0">
                     {displaySets.length > 0 ? (
                         displaySets.map((set) => (
                             <div
@@ -49,7 +88,7 @@ export default function AudioAlchemy() {
                                     {/* Play Button Indicator Centered on Hover */}
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center transform scale-90 group-hover:scale-100 transition-all duration-300">
-                                            <div className="w-0 h-0 border-t-[8px] md:border-t-[10px] border-t-transparent border-l-[12px] md:border-l-[16px] border-l-white border-b-[8px] md:border-b-[10px] border-b-transparent ml-1 md:ml-2" />
+                                            <Play className="w-6 h-6 md:w-8 md:h-8 text-white ml-1 md:ml-2 fill-white" />
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +109,7 @@ export default function AudioAlchemy() {
                         ))
                     ) : (
                         // Empty State if no sets exist
-                        <div className="w-[300px] md:w-[500px] aspect-video relative bg-zinc-900/50 border border-zinc-800 shrink-0 flex items-center justify-center snap-center">
+                        <div className="w-[300px] md:w-[500px] aspect-video relative bg-zinc-900/50 border border-zinc-800 shrink-0 flex items-center justify-center snap-center mx-auto md:mx-0">
                             <div className="text-center p-6">
                                 <p className="font-gothic text-2xl text-zinc-700 mb-2">AWAITING FREQUENCIES</p>
                                 <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">
@@ -96,16 +135,16 @@ export default function AudioAlchemy() {
                         {/* Close Button */}
                         <button
                             onClick={() => setSelectedSet(null)}
-                            className="absolute -top-12 right-0 md:top-4 md:right-4 z-20 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-zinc-900 border border-zinc-800 transition-colors rounded-full"
+                            className="absolute -top-12 right-0 md:top-4 md:right-4 z-20 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-zinc-900 border border-zinc-800 transition-colors rounded-full text-white"
                         >
-                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
                         <iframe
                             className="w-full h-full"
-                            src={`https://www.youtube.com/embed/${selectedSet.youtubeId}?autoplay=1`}
+                            src={`https://www.youtube.com/embed/${selectedSet.youtubeId}?autoplay=1${selectedSet.youtubeStartTime ? `&start=${selectedSet.youtubeStartTime}` : ''}`}
                             title={selectedSet.title}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
