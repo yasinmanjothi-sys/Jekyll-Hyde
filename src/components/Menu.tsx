@@ -230,7 +230,12 @@ export default function Menu() {
                     </AnimatePresence>
                 </div>
 
-
+                {/* Disclaimer */}
+                <div className="mt-12 text-center px-4">
+                    <p className="text-zinc-400 text-xs md:text-sm font-sans tracking-wide uppercase opacity-70">
+                        All prices are inclusive of applicable taxes. Menu and prices are subject to change.
+                    </p>
+                </div>
 
             </div>
         </section>
