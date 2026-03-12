@@ -32,8 +32,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jekyllandhydekenya.com/"),
-  title: "Jekyll & Hyde | Luxury Restaurant & Thematic Bar in Westlands, Nairobi",
-  description: "Experience unreleased flavours at Jekyll & Hyde, a premier cocktail bar and kitchen in Westlands, Nairobi. The ultimate speakeasy and alternative nightlife near The Mall and Naivas Westlands.",
+  title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
+  description: "Cocktail Bar & Kitchen",
   keywords: [
     "Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Restaurant",
     "Restaurant near The Mall Westlands", "Bar near Naivas Westlands",
@@ -42,9 +42,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jekyll & Hyde" }],
   openGraph: {
-    title: "Jekyll & Hyde | Luxury Restaurant & Thematic Bar Nairobi",
-    description: "Unreleased flavours. Unique hospitality. Dive into Nairobi's best alternative nightlife experience.",
-    url: "https://jekyllandhydekenya.com/",
+    title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
+    description: "Cocktail Bar & Kitchen",
+    url: "https://jekyllandhydekenya.com",
+    siteName: "Jekyll & Hyde",
     type: "website",
     locale: "en_KE",
     images: [
