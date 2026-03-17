@@ -147,8 +147,7 @@ export default function WeeklyEvents() {
                     </motion.h2>
                 </div>
 
-                {/* 2. Collaboration Events */}
-                <SpecialCollab />
+                {/* Moved Collaboration Events to the bottom */}
             </div>
 
             {/* Regular Weekly Events List - Wednesday to Saturday */}
@@ -236,6 +235,11 @@ export default function WeeklyEvents() {
                         </div>
                     );
                 })}
+            </div>
+
+            {/* 2. Collaboration Events (Moved to the bottom here right above Audio Alchemy in the parent) */}
+            <div className="flex flex-col w-full">
+                <SpecialCollab />
             </div>
         </section>
     );
