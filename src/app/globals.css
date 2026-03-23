@@ -86,11 +86,6 @@
   --font-sans: 'Coco Gothic', sans-serif;
   --font-mono: 'Coco Gothic', monospace;
   --font-gothic: 'Gothica', serif;
-  --font-hand: var(--font-amatic), cursive;
-}
-
-.font-hand {
-  font-family: var(--font-hand), cursive;
 }
 
 body {

@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Amatic_SC } from "next/font/google";
+
+const amatic = Amatic_SC({
+    weight: ["700"],
+    subsets: ["latin"],
+});
 
 // --- DATA ---
 const SIGNATURE_COCKTAILS = [
@@ -122,7 +128,7 @@ export default function Menu() {
                                         <div className="flex items-baseline gap-2 mb-1">
                                             <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
                                             <h3 className="text-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <span className="text-jekyll-red font-hand text-3xl md:text-4xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
+                                            <span className={`text-jekyll-red text-3xl md:text-4xl ml-auto whitespace-nowrap font-bold ${amatic.className}`}>KShs {item.price}</span>
                                         </div>
                                         <p className="text-white/90 text-sm md:text-base pl-8 leading-relaxed font-bold">
                                             {item.desc}
@@ -147,7 +153,7 @@ export default function Menu() {
                                         <div className="flex items-baseline gap-2 mb-1">
                                             <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
                                             <h3 className="text-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <div className="ml-auto text-jekyll-red font-hand text-3xl md:text-4xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold">
+                                            <div className={`ml-auto text-jekyll-red text-3xl md:text-4xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold ${amatic.className}`}>
                                                 KShs {item.price}
                                             </div>
                                         </div>
@@ -179,7 +185,7 @@ export default function Menu() {
                                             <span className="text-zinc-500 text-base font-bold">--</span>
                                             <span className="text-white text-xl md:text-2xl font-bold">{item.name}</span>
                                         </div>
-                                        <span className="text-jekyll-red font-hand text-3xl md:text-4xl pl-4 min-w-[150px] text-right font-bold">
+                                        <span className={`text-jekyll-red text-3xl md:text-4xl pl-4 min-w-[150px] text-right font-bold ${amatic.className}`}>
                                             KShs {item.price}
                                         </span>
                                     </div>
@@ -205,7 +211,7 @@ export default function Menu() {
                                                 <div key={item.name}>
                                                     <div className="flex justify-between items-baseline mb-1">
                                                         <span className="text-white text-xl md:text-2xl uppercase font-bold">--{item.name}</span>
-                                                        <span className="text-jekyll-red font-hand text-3xl md:text-4xl font-bold">KShs {item.price}</span>
+                                                        <span className={`text-jekyll-red text-3xl md:text-4xl font-bold ${amatic.className}`}>KShs {item.price}</span>
                                                     </div>
                                                     {item.desc && (
                                                         <p className="text-zinc-400 text-sm md:text-base pl-6 font-bold">{item.desc}</p>
