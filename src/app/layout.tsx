@@ -68,8 +68,8 @@ export const metadata: Metadata = {
     canonical: "https://jekyllandhydekenya.com/",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/favicon.ico?v=2",
+    shortcut: "/favicon.ico?v=2",
     apple: "/apple-touch-icon.png",
   },
 };
