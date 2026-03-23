@@ -90,7 +90,7 @@ export default function WeeklyEvents() {
                         {/* Text Section */}
                         <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center bg-zinc-950 relative z-20 border-y border-zinc-900 md:border-none">
                             <div className="flex flex-col md:items-start text-center md:text-left">
-                                <span className="text-yellow-500 font-mono tracking-[0.2em] uppercase text-sm mb-4">
+                                <span className="text-jekyll-parchment font-mono tracking-[0.2em] uppercase text-sm mb-4">
                                     Closing Rituals
                                 </span>
                                 <h2 className="text-5xl md:text-8xl font-gothic text-jekyll-red mb-6 uppercase leading-[0.9]">
@@ -131,7 +131,7 @@ export default function WeeklyEvents() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ margin: "-100px" }}
-                        className="text-4xl md:text-7xl font-gothic tracking-widest text-jekyll-red mb-2"
+                        className="text-4xl md:text-7xl font-gothic tracking-widest text-jekyll-parchment mb-2"
                     >
                         THIS WEEK AT
                     </motion.h2>
@@ -195,7 +195,7 @@ export default function WeeklyEvents() {
                                 <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center bg-zinc-950 relative z-20 border-y border-zinc-900 md:border-none">
                                     <div className={`flex flex-col ${isEven ? "md:items-start" : "md:items-end"} text-center ${isEven ? "md:text-left" : "md:text-right"}`}>
 
-                                        <span className="text-yellow-500 font-mono tracking-[0.2em] uppercase text-sm mb-4">
+                                        <span className="text-jekyll-parchment font-mono tracking-[0.2em] uppercase text-sm mb-4">
                                             {event.day}
                                         </span>
 

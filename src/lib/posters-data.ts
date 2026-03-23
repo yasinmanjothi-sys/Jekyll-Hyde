@@ -607,9 +607,9 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     "collaboration-events": [
         {
             "id": "collaboration-events-1",
-            "title": "4_Viva Carnival",
-            "time": "VIVA CARNIVAL",
-            "image": "/archive/collaboration-events/4_Viva Carnival.jpg"
+            "title": "4_Not A Rio Carnival",
+            "time": "NOT A RIO CARNIVAL",
+            "image": "/archive/collaboration-events/4_Not A Rio Carnival.jpg"
         },
         {
             "id": "collaboration-events-0",

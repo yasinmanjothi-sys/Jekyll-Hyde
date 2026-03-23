@@ -35,7 +35,7 @@ export default function SpecialCollab() {
                     transition={{ duration: 0.8 }}
                     viewport={{ margin: "-100px" }}
                 >
-                    <span className="text-jekyll-red font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-jekyll-red/50 px-4 py-2 inline-block">
+                    <span className="text-jekyll-parchment font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-jekyll-parchment/50 px-4 py-2 inline-block">
                         Past Collaborations
                     </span>
                     <h2 className="text-4xl md:text-6xl font-gothic text-jekyll-red mb-2 tracking-widest uppercase mt-6">
