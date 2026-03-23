@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'Gothica';
@@ -87,7 +86,7 @@
   --font-sans: 'Coco Gothic', sans-serif;
   --font-mono: 'Coco Gothic', monospace;
   --font-gothic: 'Gothica', serif;
-  --font-hand: 'Amatic SC', cursive;
+  --font-hand: var(--font-amatic), cursive;
 }
 
 .font-hand {
