@@ -121,7 +121,7 @@ export default function Menu() {
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
                                             <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
-                                            <h3 className="text-texture-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <h3 className="text-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
                                             <span className="text-jekyll-red font-hand text-3xl md:text-4xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
                                         </div>
                                         <p className="text-white/90 text-sm md:text-base pl-8 leading-relaxed font-bold">
@@ -146,7 +146,7 @@ export default function Menu() {
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
                                             <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
-                                            <h3 className="text-texture-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <h3 className="text-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
                                             <div className="ml-auto text-jekyll-red font-hand text-3xl md:text-4xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold">
                                                 KShs {item.price}
                                             </div>
@@ -172,7 +172,7 @@ export default function Menu() {
                                 transition={{ duration: 0.4 }}
                                 className="max-w-3xl mx-auto space-y-6"
                             >
-                                <h3 className="text-6xl text-center text-texture-jekyll-red mb-12 font-gothic">WINES</h3>
+                                <h3 className="text-6xl text-center text-jekyll-red mb-12 font-gothic">WINES</h3>
                                 {WINES.map((item) => (
                                     <div key={item.name} className="flex justify-between items-end border-b border-zinc-800 pb-2 border-dashed border-zinc-800/50">
                                         <div className="flex items-center gap-2">
@@ -199,7 +199,7 @@ export default function Menu() {
                             >
                                 {EXTENDED_MENU.map((category) => (
                                     <div key={category.category}>
-                                        <h3 className="text-5xl text-center text-texture-jekyll-red mb-8 font-gothic">{category.category}</h3>
+                                        <h3 className="text-5xl text-center text-jekyll-red mb-8 font-gothic">{category.category}</h3>
                                         <div className="space-y-8">
                                             {category.items.map((item: any) => (
                                                 <div key={item.name}>

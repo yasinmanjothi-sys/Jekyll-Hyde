@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'Gothica';
@@ -86,7 +87,7 @@
   --font-sans: 'Coco Gothic', sans-serif;
   --font-mono: 'Coco Gothic', monospace;
   --font-gothic: 'Gothica', serif;
-  --font-hand: var(--font-amatic);
+  --font-hand: 'Amatic SC', cursive;
 }
 
 .font-hand {
@@ -101,15 +102,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-@layer utilities {
-  .text-texture-jekyll-red {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/burgundy-texture.jpg');
-    background-size: cover;
-    background-position: center;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
 }
