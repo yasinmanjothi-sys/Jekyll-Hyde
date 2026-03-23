@@ -26,6 +26,19 @@ export default function NavigationBar() {
         { name: "Contact Us", href: "/contact" },
     ];
 
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        setIsOpen(false);
+        if (href.startsWith("/#") && pathname === "/") {
+            const targetId = href.split("#")[1];
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.history.pushState(null, "", href);
+            }
+        }
+    };
+
     return (
         <>
             {/* Hamburger Button (Fixed Top Left) */}
@@ -75,6 +88,7 @@ export default function NavigationBar() {
                                     <li key={link.name}>
                                         <Link
                                             href={link.href}
+                                            onClick={(e) => handleLinkClick(e, link.href)}
                                             className="font-gothic text-3xl md:text-4xl uppercase tracking-widest text-zinc-400 hover:text-jekyll-parchment transition-colors drop-shadow-sm hover:drop-shadow-[0_0_10px_rgba(238,235,224,0.3)] block w-full"
                                         >
                                             {link.name}
