@@ -84,13 +84,10 @@ export default function Menu() {
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="text-6xl md:text-8xl font-gothic text-texture-jekyll-red mb-4 tracking-widest drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]"
+                        className="text-6xl md:text-8xl font-gothic text-jekyll-red mb-4 tracking-widest drop-shadow-[0_0_10px_rgba(92,23,5,0.5)]"
                     >
                         THE MENU <span className="sr-only">- Dining near Artcaffé Gastro Bar & Drinks near 254 Beer District</span>
                     </motion.h2>
-                    <p className="font-mono text-zinc-400 text-lg md:text-xl tracking-[0.3em] uppercase font-bold">
-                        -- UNRELEASED FLAVOURS --
-                    </p>
                 </div>
 
                 {/* Categories / Tabs */}
@@ -104,7 +101,7 @@ export default function Menu() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id as Tab)}
-                            className={`font-gothic text-3xl md:text-5xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-texture-jekyll-red scale-110 drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]" : "text-zinc-600 hover:text-zinc-400"
+                            className={`font-gothic text-3xl md:text-5xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-jekyll-red scale-110 drop-shadow-[0_0_10px_rgba(92,23,5,0.5)]" : "text-zinc-600 hover:text-zinc-400"
                                 }`}
                         >
                             {tab.label}
