@@ -1,61 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NavigationBar from "@/components/NavigationBar";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
-
-const gothica = localFont({
-  src: [
-    {
-      path: "../../public/font/gothica_2/Gothica-Book.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/gothica_2/Gothica-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/gothica_2/Gothica-BookOblique.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../public/font/gothica_2/Gothica-BoldOblique.ttf",
-      weight: "700",
-      style: "italic",
-    }
-  ],
-  variable: "--font-gothica"
-});
-
-const cocoGothic = localFont({
-  src: [
-    {
-      path: "../../public/font/coco_gothic/CocoGothic_trial.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/coco_gothic/CocoGothic-Light_trial.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/coco_gothic/CocoGothic-Bold_trial.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/coco_gothic/CocoGothic-Italic_trial.ttf",
-      weight: "400",
-      style: "italic",
-    }
-  ],
-  variable: "--font-coco"
-});
 
 export const viewport = {
   width: 'device-width',
@@ -114,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gothica.variable} ${cocoGothic.variable} antialiased bg-black text-white`}
+        className={`antialiased bg-black text-white`}
       >
         <NavigationBar />
         <SiteHeader />

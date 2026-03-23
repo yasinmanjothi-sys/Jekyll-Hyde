@@ -1,5 +1,55 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Gothica';
+  src: url('/font/gothica_2/Gothica-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gothica';
+  src: url('/font/gothica_2/Gothica-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gothica';
+  src: url('/font/gothica_2/Gothica-BookOblique.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gothica';
+  src: url('/font/gothica_2/Gothica-BoldOblique.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Coco Gothic';
+  src: url('/font/coco_gothic/CocoGothic_trial.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coco Gothic';
+  src: url('/font/coco_gothic/CocoGothic-Light_trial.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coco Gothic';
+  src: url('/font/coco_gothic/CocoGothic-Bold_trial.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coco Gothic';
+  src: url('/font/coco_gothic/CocoGothic-Italic_trial.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
 :root {
   /* Site is dark by default - "Jekyll" elegance */
   --background: #0a0a0a;
@@ -33,9 +83,9 @@
   --color-jekyll-purple: var(--jekyll-purple);
   --color-jekyll-parchment: var(--jekyll-parchment);
 
-  --font-sans: var(--font-coco);
-  --font-mono: var(--font-coco);
-  --font-gothic: var(--font-gothica);
+  --font-sans: 'Coco Gothic', sans-serif;
+  --font-mono: 'Coco Gothic', monospace;
+  --font-gothic: 'Gothica', serif;
 }
 
 body {
