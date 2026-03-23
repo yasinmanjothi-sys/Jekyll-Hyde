@@ -16,7 +16,7 @@ export default function Location() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-5xl md:text-7xl font-gothic mb-12 text-white">FIND THE CURE <span className="sr-only">- Cocktail Bar & Kitchen near The Mall Westlands</span></h2>
+                    <h2 className="text-5xl md:text-7xl font-gothic mb-12 text-jekyll-red">FIND THE CURE <span className="sr-only">- Cocktail Bar & Kitchen near The Mall Westlands</span></h2>
 
                     <div className="space-y-10 font-mono text-sm md:text-base tracking-wider text-zinc-400">
 

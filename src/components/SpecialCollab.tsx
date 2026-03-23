@@ -38,7 +38,7 @@ export default function SpecialCollab() {
                     <span className="text-jekyll-red font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-jekyll-red/50 px-4 py-2 inline-block">
                         Past Collaborations
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-gothic text-white mb-2 tracking-widest uppercase mt-6">
+                    <h2 className="text-4xl md:text-6xl font-gothic text-jekyll-red mb-2 tracking-widest uppercase mt-6">
                         Special Events
                     </h2>
                 </motion.div>

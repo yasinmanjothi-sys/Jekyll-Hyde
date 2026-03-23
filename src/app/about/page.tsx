@@ -15,7 +15,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-6xl md:text-8xl font-gothic tracking-widest text-[#cc1111] uppercase mb-8 drop-shadow-[0_0_15px_rgba(204,17,17,0.3)]">
+                        <h1 className="text-6xl md:text-8xl font-gothic tracking-widest text-jekyll-red uppercase mb-8 drop-shadow-[0_0_10px_rgba(92,23,5,0.5)]">
                             The Narrative
                         </h1>
                         <div className="w-1/4 h-[1px] bg-gradient-to-r from-transparent via-jekyll-red to-transparent mx-auto"></div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                         transition={{ duration: 1 }}
                         className="text-center my-20"
                     >
-                        <p className="text-2xl md:text-3xl font-gothic text-[#cc1111] tracking-[0.2em] uppercase">
+                        <p className="text-2xl md:text-3xl font-gothic text-jekyll-red tracking-[0.2em] uppercase">
                             But as the name suggests, there is always another side.
                         </p>
                     </motion.div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                         <p className="text-2xl md:text-4xl font-gothic tracking-widest text-zinc-100">
                             This is not just a bar. 
                         </p>
-                        <p className="mt-4 text-xl md:text-2xl font-mono text-[#cc1111]/80 italic">
+                        <p className="mt-4 text-xl md:text-2xl font-mono text-jekyll-red/80 italic">
                             It is a reflection of the people who create it and those who step inside.
                         </p>
                     </motion.div>

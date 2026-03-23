@@ -93,7 +93,7 @@ export default function WeeklyEvents() {
                                 <span className="text-yellow-500 font-mono tracking-[0.2em] uppercase text-sm mb-4">
                                     Closing Rituals
                                 </span>
-                                <h2 className="text-5xl md:text-8xl font-gothic text-white mb-6 uppercase leading-[0.9]">
+                                <h2 className="text-5xl md:text-8xl font-gothic text-jekyll-red mb-6 uppercase leading-[0.9]">
                                     Closing Rituals
                                 </h2>
                                 <p className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-8">
@@ -131,7 +131,7 @@ export default function WeeklyEvents() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ margin: "-100px" }}
-                        className="text-4xl md:text-7xl font-gothic tracking-widest text-white mb-2"
+                        className="text-4xl md:text-7xl font-gothic tracking-widest text-jekyll-red mb-2"
                     >
                         THIS WEEK AT
                     </motion.h2>
@@ -140,7 +140,7 @@ export default function WeeklyEvents() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ margin: "-100px" }}
-                        className="text-4xl md:text-7xl font-gothic tracking-widest text-texture-jekyll-red"
+                        className="text-4xl md:text-7xl font-gothic tracking-widest text-jekyll-red"
                     >
                         JEKYLL & HYDE
                     </motion.h2>
@@ -199,7 +199,7 @@ export default function WeeklyEvents() {
                                             {event.day}
                                         </span>
 
-                                        <h2 className="text-5xl md:text-8xl font-gothic text-white mb-6 uppercase leading-[0.9]">
+                                        <h2 className="text-5xl md:text-8xl font-gothic text-jekyll-red mb-6 uppercase leading-[0.9]">
                                             {event.title}
                                         </h2>
 

@@ -18,7 +18,7 @@ export default function ContactPage() {
                 {/* Left Column: Contact Details */}
                 <div className="w-full md:w-1/2 p-10 md:p-24 py-20 flex flex-col justify-center border-r border-white/10">
                     <div className="max-w-xl mx-auto md:mx-0 w-full">
-                        <h2 className="text-5xl md:text-8xl font-gothic mb-8 text-white text-center md:text-left drop-shadow-[0_0_10px_rgba(220,38,38,0.5)] tracking-widest uppercase">
+                        <h2 className="text-5xl md:text-8xl font-gothic mb-8 text-jekyll-red text-center md:text-left drop-shadow-[0_0_10px_rgba(92,23,5,0.5)] tracking-widest uppercase">
                             Get In Touch
                         </h2>
 

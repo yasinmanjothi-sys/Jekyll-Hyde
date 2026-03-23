@@ -29,7 +29,7 @@ export default function AudioAlchemy() {
         <section id="audio" className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section">
             <div className="container mx-auto px-4 mb-8 text-center relative z-10">
                 <div>
-                    <h2 className="text-3xl md:text-5xl font-gothic text-white mb-2 tracking-widest uppercase">
+                    <h2 className="text-3xl md:text-5xl font-gothic text-jekyll-red mb-2 tracking-widest uppercase">
                         Audio Alchemy
                     </h2>
                     <p className="font-mono text-zinc-500 text-xs tracking-[0.2em] uppercase">
