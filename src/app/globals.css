@@ -84,7 +84,7 @@
   --color-jekyll-parchment: var(--jekyll-parchment);
 
   --font-sans: 'Coco Gothic', sans-serif;
-  --font-mono: 'Coco Gothic', monospace;
+  --font-mono: var(--font-mono), monospace;
   --font-gothic: 'Gothica', serif;
 }
 

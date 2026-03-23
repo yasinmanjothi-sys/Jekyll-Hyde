@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
+import { Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NavigationBar from "@/components/NavigationBar";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const viewport = {
   width: 'device-width',
@@ -61,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-black text-white`}
+        className={`${geistMono.variable} antialiased bg-black text-white`}
       >
         <NavigationBar />
         <SiteHeader />
