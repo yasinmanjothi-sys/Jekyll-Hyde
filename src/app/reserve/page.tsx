@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ReservePage() {
     return (
-        <main className="min-h-screen bg-[#0a0a0a] text-zinc-100 flex flex-col selection:bg-burgundy/50">
+        <main className="min-h-screen bg-jekyll-black text-zinc-100 flex flex-col selection:bg-jekyll-red/50">
             <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>
             <SiteHeader />
 
@@ -38,7 +38,7 @@ export default function ReservePage() {
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">
                             <div className="flex items-start gap-4">
-                                <MapPin className="text-burgundy w-5 h-5 mt-0.5" />
+                                <MapPin className="text-jekyll-red w-5 h-5 mt-0.5" />
                                 <div className="text-center md:text-left">
                                     <p className="text-white font-serif mb-1 uppercase tracking-widest text-base">Location</p>
                                     <p>Westlands Arcade Plaza</p>
@@ -57,33 +57,46 @@ export default function ReservePage() {
                         </div>
 
                         <ReservationButtons />
+
+                        {/* Legal & Policies */}
+                        <div className="mt-12 pt-8 border-t border-white/10 text-zinc-500 font-mono text-xs tracking-wider leading-relaxed space-y-4">
+                            <p>Management reserves the right of admission. Alcohol will only be served to patrons above 21 years.</p>
+                            <p>All guests are advised to take due care of their personal belongings at all times. Management shall not be held liable for any loss, theft, or damage to personal property howsoever caused, unless proven negligence on the part of the management, as provided for under the laws of Kenya. By entering the premises, patrons acknowledge and accept this notice.</p>
+                            <p>Strictly no outside food or drinks allowed on this premises and its extensions. Management reserves the right to refuse entry or request the removal of any such items in accordance with applicable laws and regulations in Kenya.</p>
+                        </div>
                     </div>
 
                 </div>
 
                 {/* Right Column: The Map */}
-                <div className="w-full md:w-1/2 min-h-[50vh] relative group overflow-hidden bg-burgundy/40 mt-auto md:mt-0">
+                <div className="w-full md:w-1/2 min-h-[50vh] relative group overflow-hidden bg-jekyll-red/40 mt-auto md:mt-0">
                     <a
                         href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full h-full relative"
                     >
-                        {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
-                        <Image
-                            src="/new_map.png"
-                            alt="Map to Jekyll & Hyde"
-                            fill
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                        />
+                        {/* Red Night Vision Filter over Google Maps */}
+                        <div className="absolute inset-0 z-0 pointer-events-none filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%] opacity-80 mix-blend-multiply">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Jekyll+and+Hyde+Westlands+Arcade+Plaza,+Waiyaki+Way,+Nairobi&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, filter: "grayscale(100%) invert(100%)" }}
+                                allowFullScreen={false}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="w-full h-full absolute inset-0 pointer-events-none"
+                            ></iframe>
+                        </div>
 
-                        {/* "Hyde" Overlay (Red Tint on Hover) */}
-                        <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
+                        {/* Additional "Hyde" Overlay (Red Tint on Hover) */}
+                        <div className="absolute inset-0 bg-jekyll-red/0 mix-blend-multiply group-hover:bg-jekyll-red/60 transition-colors duration-500 z-10" />
 
                         {/* CTA Overlay */}
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
-                                <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN IN MAPS</span>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                            <div className="bg-jekyll-black/80 px-8 py-4 border border-jekyll-red backdrop-blur-sm pointer-events-none">
+                                <span className="font-gothic text-2xl text-jekyll-red tracking-widest">OPEN IN MAPS</span>
                             </div>
                         </div>
                     </a>

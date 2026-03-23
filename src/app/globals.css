@@ -9,6 +9,14 @@
   --accent-red: #7f1d1d;
   --accent-gold: #c0a062;
   --burgundy: #850529;
+
+  /* Jekyll Client Palette */
+  --jekyll-red: #5c1705;
+  --jekyll-navy: #041043;
+  --jekyll-green: #02412a;
+  --jekyll-black: #000000;
+  --jekyll-purple: #2d013c;
+  --jekyll-parchment: #eeebe0;
 }
 
 @theme inline {
@@ -17,6 +25,13 @@
   --color-accent-red: var(--accent-red);
   --color-accent-gold: var(--accent-gold);
   --color-burgundy: var(--burgundy);
+
+  --color-jekyll-red: var(--jekyll-red);
+  --color-jekyll-navy: var(--jekyll-navy);
+  --color-jekyll-green: var(--jekyll-green);
+  --color-jekyll-black: var(--jekyll-black);
+  --color-jekyll-purple: var(--jekyll-purple);
+  --color-jekyll-parchment: var(--jekyll-parchment);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

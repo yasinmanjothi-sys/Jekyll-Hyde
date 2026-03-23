@@ -22,7 +22,7 @@ export default function Location() {
 
                         {/* Address */}
                         <div className="flex items-start gap-4 hover:text-white transition-colors group">
-                            <MapPin className="text-burgundy w-6 h-6 mt-1 group-hover:scale-110 transition-transform" />
+                            <MapPin className="text-jekyll-red w-6 h-6 mt-1 group-hover:scale-110 transition-transform" />
                             <div>
                                 <p className="text-white text-lg font-serif mb-1">HQ</p>
                                 <p>Westlands Arcade Plaza</p>
@@ -72,28 +72,34 @@ export default function Location() {
             </div>
 
             {/* Right Column: The Map */}
-            <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-burgundy/40">
+            <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-jekyll-red/40">
                 <a
                     href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full h-full relative"
                 >
-                    {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
-                    <Image
-                        src="/new_map.png"
-                        alt="Map to Jekyll & Hyde - High-End Restaurant and Bar near The Mall Westlands"
-                        fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
+                    {/* Red Night Vision Filter over Google Maps */}
+                    <div className="absolute inset-0 z-0 pointer-events-none filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%] opacity-80 mix-blend-multiply">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Jekyll+and+Hyde+Westlands+Arcade+Plaza,+Waiyaki+Way,+Nairobi&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, filter: "grayscale(100%) invert(100%)" }}
+                            allowFullScreen={false}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full h-full absolute inset-0 pointer-events-none"
+                        ></iframe>
+                    </div>
 
                     {/* "Hyde" Overlay (Red Tint on Hover) */}
-                    <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-jekyll-red/0 mix-blend-multiply group-hover:bg-jekyll-red/60 transition-colors duration-500 z-10" />
 
                     {/* CTA Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
-                            <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN MAPS</span>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                        <div className="bg-jekyll-black/80 px-8 py-4 border border-jekyll-red backdrop-blur-sm pointer-events-none">
+                            <span className="font-gothic text-2xl text-jekyll-red tracking-widest">OPEN MAPS</span>
                         </div>
                     </div>
                 </a>
