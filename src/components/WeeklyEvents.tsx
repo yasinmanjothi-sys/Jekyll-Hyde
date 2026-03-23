@@ -27,7 +27,8 @@ const EVENTS = [
         description: "Your weekly descent into high-energy pop, remixed anthems, and unapologetic singalongs. From throwbacks to current hits, Pop Culture redefines the weekend kickoff with an electric atmosphere designed for those who want to dance until the lights come on.",
         time: "From 6:00 PM",
         image: "/events/friday.jpg"
-    },
+    }
+    /* 
     {
         day: "Saturday",
         title: "Sacrosanct",
@@ -35,6 +36,7 @@ const EVENTS = [
         time: "From 6:00 PM",
         image: "/events/saturday.jpg"
     }
+    */
 ];
 
 export default function WeeklyEvents() {
@@ -52,8 +54,6 @@ export default function WeeklyEvents() {
 
     return (
         <section id="events" className="min-h-screen w-full bg-zinc-950 text-white py-24 px-6 md:px-0 overflow-hidden">
-
-
 
             {/* Featured Events (Closing Rituals & Collab Events) */}
             <div className="flex flex-col w-full mb-24">
@@ -145,11 +145,9 @@ export default function WeeklyEvents() {
                         JEKYLL & HYDE
                     </motion.h2>
                 </div>
-
-                {/* Moved Collaboration Events to the bottom */}
             </div>
 
-            {/* Regular Weekly Events List - Wednesday to Saturday */}
+            {/* Regular Weekly Events List - Wednesday to Friday */}
             <div className="flex flex-col w-full">
                 {EVENTS.map((event, index) => {
                     // Since closing rituals & collab are out of the loop, Wednesday is now index 0. 
