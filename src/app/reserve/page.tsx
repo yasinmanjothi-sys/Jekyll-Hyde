@@ -6,7 +6,7 @@ import ReservationButtons from "./ReservationButtons";
 
 export const metadata: Metadata = {
     title: "Reservations | Jekyll & Hyde Westlands, Nairobi",
-    description: "Secure your ritual at Jekyll & Hyde. Call or WhatsApp to book your table at Nairobi's premier speakeasy and dining venue near Naivas Westlands.",
+    description: "Secure your ritual at Jekyll & Hyde. Call or WhatsApp to book your table at Nairobi's premier Cocktail Bar & Kitchen near Naivas Westlands.",
     alternates: {
         canonical: "https://jekyllandhydekenya.com/reserve",
     },
@@ -33,7 +33,7 @@ export default function ReservePage() {
                         <p className="text-zinc-400 font-mono text-sm md:text-base tracking-wider mb-8 text-center md:text-left max-w-md">
                             Book early to guarantee your place in the shadows.
                             <br /><br />
-                            Jekyll & Hyde Nairobi is the premier destination for exclusive dining and immersive nightlife in Westlands, near Lavington. We highly recommend securing table reservations in advance for our highly sought-after venue.
+                            Jekyll & Hyde Nairobi is the premier Cocktail Bar & Kitchen for exclusive dining and immersive nightlife in Westlands, near Lavington. We highly recommend securing table reservations in advance for our highly sought-after venue.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">

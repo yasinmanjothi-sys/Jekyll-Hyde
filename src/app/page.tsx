@@ -10,7 +10,7 @@ import AudioAlchemy from "@/components/AudioAlchemy";
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Home | Jekyll & Hyde - Thematic Bar & Restaurant in Westlands",
+  title: "Home | Jekyll & Hyde - Cocktail Bar & Kitchen in Westlands",
   description: "Join us at Jekyll & Hyde in Westlands, Nairobi. Exceptional dining, masterfully crafted cocktails, and alternative nightlife near The Mall and 254 Beer District.",
 };
 

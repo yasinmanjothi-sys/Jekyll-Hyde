@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
   description: "Cocktail Bar & Kitchen",
   keywords: [
-    "Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Restaurant",
-    "Restaurant near The Mall Westlands", "Bar near Naivas Westlands",
+    "Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Kitchen",
+    "Cocktail Bar near The Mall Westlands", "Bar near Naivas Westlands",
     "Drinks near 254 Beer District", "Dining near Artcaffé Gastro Bar",
-    "Thematic bar Westlands", "Speakeasy Nairobi", "Alternative nightlife Nairobi"
+    "Cocktail Bar Westlands", "Speakeasy Nairobi", "Alternative nightlife Nairobi"
   ],
   authors: [{ name: "Jekyll & Hyde" }],
   openGraph: {
