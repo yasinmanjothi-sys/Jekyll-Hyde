@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Amatic_SC } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NavigationBar from "@/components/NavigationBar";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+
+const amaticSC = Amatic_SC({
+  variable: "--font-amatic",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const viewport = {
   width: 'device-width',
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-black text-white`}
+        className={`${amaticSC.variable} antialiased bg-black text-white`}
       >
         <NavigationBar />
         <SiteHeader />

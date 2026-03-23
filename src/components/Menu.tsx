@@ -120,11 +120,11 @@ export default function Menu() {
                                 {SIGNATURE_COCKTAILS.map((item) => (
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
-                                            <span className="text-jekyll-red text-3xl md:text-4xl font-bold">--</span>
-                                            <h3 className="text-texture-jekyll-red text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <span className="text-jekyll-red text-2xl md:text-3xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
+                                            <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
+                                            <h3 className="text-texture-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <span className="text-jekyll-red font-hand text-3xl md:text-4xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
                                         </div>
-                                        <p className="text-white/90 text-xl md:text-2xl pl-8 leading-relaxed font-bold">
+                                        <p className="text-white/90 text-sm md:text-base pl-8 leading-relaxed font-bold">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -145,17 +145,17 @@ export default function Menu() {
                                 {TAPAS_BITINGS.map((item) => (
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
-                                            <span className="text-jekyll-red text-3xl md:text-4xl font-bold">--</span>
-                                            <h3 className="text-texture-jekyll-red text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <div className="ml-auto text-jekyll-red text-2xl md:text-3xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold">
+                                            <span className="text-jekyll-red text-xl md:text-2xl font-bold">--</span>
+                                            <h3 className="text-texture-jekyll-red text-xl md:text-2xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <div className="ml-auto text-jekyll-red font-hand text-3xl md:text-4xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold">
                                                 KShs {item.price}
                                             </div>
                                         </div>
-                                        <p className="text-white/90 text-xl md:text-2xl pl-8 leading-relaxed mb-2 font-bold">
+                                        <p className="text-white/90 text-sm md:text-base pl-8 leading-relaxed mb-2 font-bold">
                                             {item.desc}
                                         </p>
                                         {item.allergens && (
-                                            <p className="text-zinc-500 text-lg pl-8 italic font-bold">Allergens: {item.allergens}</p>
+                                            <p className="text-zinc-500 text-sm pl-8 italic font-bold">Allergens: {item.allergens}</p>
                                         )}
                                     </div>
                                 ))}
@@ -176,10 +176,10 @@ export default function Menu() {
                                 {WINES.map((item) => (
                                     <div key={item.name} className="flex justify-between items-end border-b border-zinc-800 pb-2 border-dashed border-zinc-800/50">
                                         <div className="flex items-center gap-2">
-                                            <span className="text-zinc-500 text-xl font-bold">--</span>
-                                            <span className="text-white text-2xl md:text-3xl font-bold">{item.name}</span>
+                                            <span className="text-zinc-500 text-base font-bold">--</span>
+                                            <span className="text-white text-xl md:text-2xl font-bold">{item.name}</span>
                                         </div>
-                                        <span className="text-jekyll-red text-2xl md:text-3xl pl-4 min-w-[150px] text-right font-bold">
+                                        <span className="text-jekyll-red font-hand text-3xl md:text-4xl pl-4 min-w-[150px] text-right font-bold">
                                             KShs {item.price}
                                         </span>
                                     </div>
@@ -204,11 +204,11 @@ export default function Menu() {
                                             {category.items.map((item: any) => (
                                                 <div key={item.name}>
                                                     <div className="flex justify-between items-baseline mb-1">
-                                                        <span className="text-white text-3xl uppercase font-bold">--{item.name}</span>
-                                                        <span className="text-jekyll-red text-3xl font-bold">KShs {item.price}</span>
+                                                        <span className="text-white text-xl md:text-2xl uppercase font-bold">--{item.name}</span>
+                                                        <span className="text-jekyll-red font-hand text-3xl md:text-4xl font-bold">KShs {item.price}</span>
                                                     </div>
                                                     {item.desc && (
-                                                        <p className="text-zinc-400 text-xl pl-6 font-bold">{item.desc}</p>
+                                                        <p className="text-zinc-400 text-sm md:text-base pl-6 font-bold">{item.desc}</p>
                                                     )}
                                                 </div>
                                             ))}
