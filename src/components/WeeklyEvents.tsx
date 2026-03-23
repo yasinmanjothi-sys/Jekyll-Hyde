@@ -82,7 +82,7 @@ export default function WeeklyEvents() {
                     // To keep Wednesday looking like a regular right-sided image (previously it was odd index 1),
                     // We can inverse the isEven check.
                     const isEven = index % 2 !== 0;
-                    const eventSlug = (event as any).slug || event.day.toLowerCase().replace(/\s+/g, '-') as EventSlug;
+                    const eventSlug = ((event as any).slug || event.day.toLowerCase().replace(/\s+/g, '-')) as keyof typeof archivePosters;
                     const archiveImages = archivePosters[eventSlug] || [];
                     const displayImage = archiveImages.length > 0 ? archiveImages[0].image : event.image;
 
