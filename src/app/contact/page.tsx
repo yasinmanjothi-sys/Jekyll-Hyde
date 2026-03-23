@@ -85,7 +85,7 @@ export default function ContactPage() {
                         className="block w-full h-full relative"
                     >
                         <Image
-                            src="/new_map.png"
+                            src="/MAP.png"
                             alt="Jekyll & Hyde Location Map"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-80"

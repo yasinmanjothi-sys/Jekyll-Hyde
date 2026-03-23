@@ -81,7 +81,7 @@ export default function Location() {
                 >
                     {/* Red Night Vision Filter over Map Image */}
                         <Image
-                            src="/new_map.png"
+                            src="/MAP.png"
                             alt="Map to Jekyll & Hyde"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%]"
