@@ -25,7 +25,7 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
     if (!eventSlug || !eventInfo[eventSlug]) {
         return (
             <div className="min-h-screen bg-zinc-950 flex items-center justify-center text-white">
-                <Link href={`/#event-${eventSlug}`} className="hover:text-burgundy font-mono uppercase tracking-widest text-sm">
+                <Link href={`/#event-${eventSlug}`} className="hover:text-jekyll-red font-mono uppercase tracking-widest text-sm">
                     Return to Events
                 </Link>
             </div>
@@ -59,7 +59,7 @@ export default function ArchiveClient({ eventSlug }: { eventSlug: EventSlug }) {
                     transition={{ duration: 0.8 }}
                     className="text-center"
                 >
-                    <h1 className="text-5xl md:text-8xl font-gothic text-texture-burgundy mb-4 tracking-widest uppercase">
+                    <h1 className="text-5xl md:text-8xl font-gothic text-texture-jekyll-red mb-4 tracking-widest uppercase">
                         {title}
                     </h1>
                     <p className="font-mono text-zinc-500 text-sm md:text-base tracking-[0.2em] uppercase">

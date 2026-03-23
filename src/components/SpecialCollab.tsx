@@ -35,7 +35,7 @@ export default function SpecialCollab() {
                     transition={{ duration: 0.8 }}
                     viewport={{ margin: "-100px" }}
                 >
-                    <span className="text-burgundy font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-burgundy/50 px-4 py-2 inline-block">
+                    <span className="text-jekyll-red font-mono tracking-[0.3em] uppercase text-sm mb-4 border border-jekyll-red/50 px-4 py-2 inline-block">
                         Past Collaborations
                     </span>
                     <h2 className="text-4xl md:text-6xl font-gothic text-white mb-2 tracking-widest uppercase mt-6">
@@ -105,7 +105,7 @@ export default function SpecialCollab() {
                                 </div>
 
                                 <div className="px-2 text-center md:text-left flex flex-col items-center md:items-start">
-                                    <h3 className="font-gothic text-2xl md:text-3xl text-white mb-2 tracking-wider uppercase group-hover:text-burgundy transition-colors duration-300 leading-none">
+                                    <h3 className="font-gothic text-2xl md:text-3xl text-white mb-2 tracking-wider uppercase group-hover:text-jekyll-red transition-colors duration-300 leading-none">
                                         {cleanTitle || "Special Collab"}
                                     </h3>
                                     {event.time && (

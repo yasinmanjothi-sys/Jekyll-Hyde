@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Phone, MessageCircle, MapPin, Mail, Handshake } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
     title: "Contact Us | Jekyll & Hyde Westlands",
@@ -12,10 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-jekyll-black text-jekyll-parchment flex flex-col">
-            <h1 className="sr-only">Contact Jekyll & Hyde</h1>
-            <SiteHeader />
-
-            {/* Top Spacer for Fixed Navbar */}
+            <h1 className="sr-only">Contact Jekyll & Hyde</h1>{/* Top Spacer for Fixed Navbar */}
             <div className="h-20 w-full" />
 
             <section className="flex-grow w-full flex flex-col md:flex-row">

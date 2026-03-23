@@ -94,7 +94,7 @@ export default function AudioAlchemy() {
                                 </div>
 
                                 <div className="px-1">
-                                    <h3 className="font-gothic text-2xl md:text-3xl text-white mb-1 tracking-wider uppercase group-hover:text-burgundy transition-colors duration-300 leading-none">
+                                    <h3 className="font-gothic text-2xl md:text-3xl text-white mb-1 tracking-wider uppercase group-hover:text-jekyll-red transition-colors duration-300 leading-none">
                                         {set.title.split('\n').map((line, i) => (
                                             <span key={i} className="block">{line}</span>
                                         ))}

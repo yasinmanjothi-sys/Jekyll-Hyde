@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
-import SiteHeader from "@/components/SiteHeader";
 import ReservationButtons from "./ReservationButtons";
 
 export const metadata: Metadata = {
@@ -15,10 +14,7 @@ export const metadata: Metadata = {
 export default function ReservePage() {
     return (
         <main className="min-h-screen bg-jekyll-black text-zinc-100 flex flex-col selection:bg-jekyll-red/50">
-            <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>
-            <SiteHeader />
-
-            {/* Top Spacer for Fixed Navbar */}
+            <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>{/* Top Spacer for Fixed Navbar */}
             <div className="h-20 w-full" />
 
             <section className="flex-grow w-full flex flex-col md:flex-row">
@@ -76,19 +72,13 @@ export default function ReservePage() {
                         rel="noopener noreferrer"
                         className="block w-full h-full relative"
                     >
-                        {/* Red Night Vision Filter over Google Maps */}
-                        <div className="absolute inset-0 z-0 pointer-events-none filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%] opacity-80 mix-blend-multiply">
-                            <iframe
-                                src="https://maps.google.com/maps?q=Jekyll+and+Hyde+Westlands+Arcade+Plaza,+Waiyaki+Way,+Nairobi&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0, filter: "grayscale(100%) invert(100%)" }}
-                                allowFullScreen={false}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="w-full h-full absolute inset-0 pointer-events-none"
-                            ></iframe>
-                        </div>
+                        {/* Red Night Vision Filter over Map Image */}
+                        <Image
+                            src="/new_map.png"
+                            alt="Map to Jekyll & Hyde"
+                            fill
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%]"
+                        />
 
                         {/* Additional "Hyde" Overlay (Red Tint on Hover) */}
                         <div className="absolute inset-0 bg-jekyll-red/0 mix-blend-multiply group-hover:bg-jekyll-red/60 transition-colors duration-500 z-10" />

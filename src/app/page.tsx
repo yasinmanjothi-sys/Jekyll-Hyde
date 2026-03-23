@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import SocialGallery from "@/components/SocialGallery";
 import AudioAlchemy from "@/components/AudioAlchemy";
 
-import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
@@ -17,9 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <h1 className="sr-only">Jekyll & Hyde | Cocktail Bar & Kitchen</h1>
-      <SiteHeader />
-      <Hero />
+      <h1 className="sr-only">Jekyll & Hyde | Cocktail Bar & Kitchen</h1><Hero />
       <WeeklyEvents />
       <AudioAlchemy />
       <SocialGallery />

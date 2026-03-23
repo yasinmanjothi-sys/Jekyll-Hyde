@@ -79,19 +79,13 @@ export default function Location() {
                     rel="noopener noreferrer"
                     className="block w-full h-full relative"
                 >
-                    {/* Red Night Vision Filter over Google Maps */}
-                    <div className="absolute inset-0 z-0 pointer-events-none filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%] opacity-80 mix-blend-multiply">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Jekyll+and+Hyde+Westlands+Arcade+Plaza,+Waiyaki+Way,+Nairobi&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0, filter: "grayscale(100%) invert(100%)" }}
-                            allowFullScreen={false}
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            className="w-full h-full absolute inset-0 pointer-events-none"
-                        ></iframe>
-                    </div>
+                    {/* Red Night Vision Filter over Map Image */}
+                        <Image
+                            src="/new_map.png"
+                            alt="Map to Jekyll & Hyde"
+                            fill
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%]"
+                        />
 
                     {/* "Hyde" Overlay (Red Tint on Hover) */}
                     <div className="absolute inset-0 bg-jekyll-red/0 mix-blend-multiply group-hover:bg-jekyll-red/60 transition-colors duration-500 z-10" />

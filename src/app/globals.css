@@ -8,7 +8,7 @@
   /* "Hyde" Accents */
   --accent-red: #7f1d1d;
   --accent-gold: #c0a062;
-  --burgundy: #850529;
+  --jekyll-red: #850529;
 
   /* Jekyll Client Palette */
   --jekyll-red: #5c1705;
@@ -24,7 +24,7 @@
   --color-foreground: var(--foreground);
   --color-accent-red: var(--accent-red);
   --color-accent-gold: var(--accent-gold);
-  --color-burgundy: var(--burgundy);
+  --color-jekyll-red: var(--jekyll-red);
 
   --color-jekyll-red: var(--jekyll-red);
   --color-jekyll-navy: var(--jekyll-navy);
@@ -54,7 +54,7 @@ body {
 }
 
 @layer utilities {
-  .text-texture-burgundy {
+  .text-texture-jekyll-red {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/burgundy-texture.jpg');
     background-size: cover;
     background-position: center;

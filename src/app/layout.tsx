@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pirata_One, Amatic_SC } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NavigationBar from "@/components/NavigationBar";
+import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -86,6 +87,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${pirataOne.variable} ${amaticSC.variable} antialiased bg-black text-white`}
       >
         <NavigationBar />
+        <SiteHeader />
         {children}
         <GoogleAnalytics gaId="G-KSNDZHYJVY" />
       </body>

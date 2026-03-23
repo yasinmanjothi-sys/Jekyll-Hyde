@@ -84,7 +84,7 @@ export default function Menu() {
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="text-6xl md:text-8xl font-gothic text-texture-burgundy mb-4 tracking-widest drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]"
+                        className="text-6xl md:text-8xl font-gothic text-texture-jekyll-red mb-4 tracking-widest drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]"
                     >
                         THE MENU <span className="sr-only">- Dining near Artcaffé Gastro Bar & Drinks near 254 Beer District</span>
                     </motion.h2>
@@ -94,7 +94,7 @@ export default function Menu() {
                 </div>
 
                 {/* Categories / Tabs */}
-                <div className="flex flex-wrap justify-center gap-8 mb-16 border-b border-burgundy/30 pb-4">
+                <div className="flex flex-wrap justify-center gap-8 mb-16 border-b border-jekyll-red/30 pb-4">
                     {[
                         { id: "cocktails", label: "Signature Cocktails" },
                         { id: "tapas", label: "Tapas & Bitings" },
@@ -104,7 +104,7 @@ export default function Menu() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id as Tab)}
-                            className={`font-gothic text-3xl md:text-5xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-texture-burgundy scale-110 drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]" : "text-zinc-600 hover:text-zinc-400"
+                            className={`font-gothic text-3xl md:text-5xl uppercase tracking-widest transition-all duration-300 ${activeTab === tab.id ? "text-texture-jekyll-red scale-110 drop-shadow-[0_0_10px_rgba(133,5,41,0.5)]" : "text-zinc-600 hover:text-zinc-400"
                                 }`}
                         >
                             {tab.label}
@@ -129,9 +129,9 @@ export default function Menu() {
                                 {SIGNATURE_COCKTAILS.map((item) => (
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
-                                            <span className="text-burgundy text-3xl md:text-4xl font-bold">--</span>
-                                            <h3 className="text-texture-burgundy text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <span className="text-burgundy text-2xl md:text-3xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
+                                            <span className="text-jekyll-red text-3xl md:text-4xl font-bold">--</span>
+                                            <h3 className="text-texture-jekyll-red text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <span className="text-jekyll-red text-2xl md:text-3xl ml-auto whitespace-nowrap font-bold">KShs {item.price}</span>
                                         </div>
                                         <p className="text-white/90 text-xl md:text-2xl pl-8 leading-relaxed font-bold">
                                             {item.desc}
@@ -154,9 +154,9 @@ export default function Menu() {
                                 {TAPAS_BITINGS.map((item) => (
                                     <div key={item.name} className="group">
                                         <div className="flex items-baseline gap-2 mb-1">
-                                            <span className="text-burgundy text-3xl md:text-4xl font-bold">--</span>
-                                            <h3 className="text-texture-burgundy text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
-                                            <div className="ml-auto text-burgundy text-2xl md:text-3xl whitespace-nowrap group-hover:underline decoration-burgundy/50 font-bold">
+                                            <span className="text-jekyll-red text-3xl md:text-4xl font-bold">--</span>
+                                            <h3 className="text-texture-jekyll-red text-3xl md:text-4xl uppercase tracking-wide font-bold">{item.name}</h3>
+                                            <div className="ml-auto text-jekyll-red text-2xl md:text-3xl whitespace-nowrap group-hover:underline decoration-jekyll-red/50 font-bold">
                                                 KShs {item.price}
                                             </div>
                                         </div>
@@ -181,14 +181,14 @@ export default function Menu() {
                                 transition={{ duration: 0.4 }}
                                 className="max-w-3xl mx-auto space-y-6"
                             >
-                                <h3 className="text-6xl text-center text-texture-burgundy mb-12 font-gothic">WINES</h3>
+                                <h3 className="text-6xl text-center text-texture-jekyll-red mb-12 font-gothic">WINES</h3>
                                 {WINES.map((item) => (
                                     <div key={item.name} className="flex justify-between items-end border-b border-zinc-800 pb-2 border-dashed border-zinc-800/50">
                                         <div className="flex items-center gap-2">
                                             <span className="text-zinc-500 text-xl font-bold">--</span>
                                             <span className="text-white text-2xl md:text-3xl font-bold">{item.name}</span>
                                         </div>
-                                        <span className="text-burgundy text-2xl md:text-3xl pl-4 min-w-[150px] text-right font-bold">
+                                        <span className="text-jekyll-red text-2xl md:text-3xl pl-4 min-w-[150px] text-right font-bold">
                                             KShs {item.price}
                                         </span>
                                     </div>
@@ -208,13 +208,13 @@ export default function Menu() {
                             >
                                 {EXTENDED_MENU.map((category) => (
                                     <div key={category.category}>
-                                        <h3 className="text-5xl text-center text-texture-burgundy mb-8 font-gothic">{category.category}</h3>
+                                        <h3 className="text-5xl text-center text-texture-jekyll-red mb-8 font-gothic">{category.category}</h3>
                                         <div className="space-y-8">
                                             {category.items.map((item: any) => (
                                                 <div key={item.name}>
                                                     <div className="flex justify-between items-baseline mb-1">
                                                         <span className="text-white text-3xl uppercase font-bold">--{item.name}</span>
-                                                        <span className="text-burgundy text-3xl font-bold">KShs {item.price}</span>
+                                                        <span className="text-jekyll-red text-3xl font-bold">KShs {item.price}</span>
                                                     </div>
                                                     {item.desc && (
                                                         <p className="text-zinc-400 text-xl pl-6 font-bold">{item.desc}</p>
