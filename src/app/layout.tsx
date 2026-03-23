@@ -1,30 +1,60 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pirata_One, Amatic_SC } from "next/font/google";
+import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import NavigationBar from "@/components/NavigationBar";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const gothica = localFont({
+  src: [
+    {
+      path: "../../public/font/gothica_2/Gothica-Book.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/gothica_2/Gothica-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/gothica_2/Gothica-BookOblique.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/font/gothica_2/Gothica-BoldOblique.ttf",
+      weight: "700",
+      style: "italic",
+    }
+  ],
+  variable: "--font-gothica"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const pirataOne = Pirata_One({
-  variable: "--font-pirata",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const amaticSC = Amatic_SC({
-  variable: "--font-amatic",
-  weight: ["400", "700"],
-  subsets: ["latin"],
+const cocoGothic = localFont({
+  src: [
+    {
+      path: "../../public/font/coco_gothic/CocoGothic_trial.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/coco_gothic/CocoGothic-Light_trial.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/coco_gothic/CocoGothic-Bold_trial.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/coco_gothic/CocoGothic-Italic_trial.ttf",
+      weight: "400",
+      style: "italic",
+    }
+  ],
+  variable: "--font-coco"
 });
 
 export const viewport = {
@@ -84,7 +114,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pirataOne.variable} ${amaticSC.variable} antialiased bg-black text-white`}
+        className={`${gothica.variable} ${cocoGothic.variable} antialiased bg-black text-white`}
       >
         <NavigationBar />
         <SiteHeader />

@@ -33,14 +33,9 @@
   --color-jekyll-purple: var(--jekyll-purple);
   --color-jekyll-parchment: var(--jekyll-parchment);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-gothic: var(--font-pirata);
-  --font-hand: var(--font-amatic);
-}
-
-.font-hand {
-  font-family: var(--font-hand), cursive;
+  --font-sans: var(--font-coco);
+  --font-mono: var(--font-coco);
+  --font-gothic: var(--font-gothica);
 }
 
 body {
