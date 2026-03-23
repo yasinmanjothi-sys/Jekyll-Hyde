@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { archivePosters, EventSlug } from "@/lib/posters-data";
-import SpecialCollab from "./SpecialCollab";
 
 const EVENTS = [
     {
@@ -237,10 +236,6 @@ export default function WeeklyEvents() {
                 })}
             </div>
 
-            {/* 2. Collaboration Events (Moved to the bottom here right above Audio Alchemy in the parent) */}
-            <div className="flex flex-col w-full">
-                <SpecialCollab />
-            </div>
         </section>
     );
 }
