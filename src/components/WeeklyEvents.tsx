@@ -9,9 +9,17 @@ import SpecialCollab from "./SpecialCollab";
 
 const EVENTS = [
     {
+        day: "Saturday",
+        title: "Closing Rituals",
+        slug: "closing-rituals",
+        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
+        time: "From 6:00 PM",
+        image: "/events/closing-rituals.jpg"
+    },
+    {
         day: "Wednesday",
-        title: "Midweek Blend",
-        description: "A fluid midweek session where DJ sets intertwine with live instrumentation. Designed for after-work drinks that ease you into the night.",
+        title: "Pop Up Improv",
+        description: "Donation-based entry, and limited seats for the show, the terrace will remain open with free entry. DJ Set by Chopstick.",
         time: "From 6:00 PM",
         image: "/events/wednesday.jpg"
     },
@@ -28,24 +36,7 @@ const EVENTS = [
         description: "Your weekly descent into high-energy pop, remixed anthems, and unapologetic singalongs. From throwbacks to current hits, Pop Culture redefines the weekend kickoff with an electric atmosphere designed for those who want to dance until the lights come on.",
         time: "From 6:00 PM",
         image: "/events/friday.jpg"
-    },
-    {
-        day: "Saturday",
-        title: "Closing Rituals",
-        slug: "closing-rituals",
-        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
-        time: "From 6:00 PM",
-        image: "/events/closing-rituals.jpg"
     }
-    /* 
-    {
-        day: "Saturday",
-        title: "Sacrosanct",
-        description: "A deeper, more immersive Saturday experience. House melodies, steady builds, and layered soundscapes define the night- crafted for those who appreciate progression, atmosphere, and a dancefloor that evolves with intention. High energy, but refined.",
-        time: "From 6:00 PM",
-        image: "/events/saturday.jpg"
-    }
-    */
 ];
 
 export default function WeeklyEvents() {
