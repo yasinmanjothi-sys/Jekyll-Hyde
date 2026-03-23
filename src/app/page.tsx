@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white px-0 overflow-x-hidden">
       <h1 className="sr-only">Jekyll & Hyde | Cocktail Bar & Kitchen</h1><Hero />
+      <WeeklyEvents />
       <AudioAlchemy />
       <SocialGallery />
       <Menu />
-      <WeeklyEvents />
       <Location />
       <Footer />
     </main>
