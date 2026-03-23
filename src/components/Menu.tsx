@@ -2,12 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Amatic_SC } from "next/font/google";
-
-const amatic = Amatic_SC({
-    weight: ["400", "700"],
-    subsets: ["latin"],
-});
 
 // --- DATA ---
 const SIGNATURE_COCKTAILS = [
@@ -73,7 +67,7 @@ export default function Menu() {
     const [activeTab, setActiveTab] = useState<Tab>("cocktails");
 
     return (
-        <section id="menu" className={`min-h-screen w-full bg-black text-white py-24 px-4 md:px-20 relative overflow-hidden ${amatic.className}`}>
+        <section id="menu" className={`min-h-screen w-full bg-black text-white py-24 px-4 md:px-20 relative overflow-hidden`}>
 
             {/* Background Texture similar to menu card */}
             <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
