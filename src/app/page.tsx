@@ -6,6 +6,7 @@ import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import SocialGallery from "@/components/SocialGallery";
 import AudioAlchemy from "@/components/AudioAlchemy";
+import SpecialCollab from "@/components/SpecialCollab";
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Home() {
       <WeeklyEvents />
       <AudioAlchemy />
       <SocialGallery />
+      <SpecialCollab />
       <Menu />
       <Location />
       <Footer />
