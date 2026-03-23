@@ -33,7 +33,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://jekyllandhydekenya.com/"),
   title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
-  description: "Cocktail Bar & Kitchen",
+  description: "Jekyll & Hyde | Cocktail Bar & Kitchen. Experience Nairobi's premier alternative nightlife and dining ritual in Westlands.",
   keywords: [
     "Cocktail Bar", "Nairobi", "Westlands", "Jekyll & Hyde", "Nightlife", "Kitchen",
     "Cocktail Bar near The Mall Westlands", "Bar near Naivas Westlands",
