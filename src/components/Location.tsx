@@ -82,13 +82,15 @@ export default function Location() {
                     {/* Red Night Vision Filter over Map Image */}
                         <Image
                             src="/MAP.png"
-                            alt="Map to Jekyll & Hyde"
+                            alt="Jekyll & Hyde Location Map"
                             fill
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter sepia hue-rotate-[-50deg] saturate-[500%] contrast-[120%]"
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out grayscale contrast-125 saturate-50"
                         />
+                        {/* Permanent Red Tint Block */}
+                        <div className="absolute inset-0 bg-[#bb0a0a] mix-blend-multiply opacity-100 pointer-events-none z-10 transition-opacity duration-700 group-hover:opacity-90" />
 
                     {/* "Hyde" Overlay (Red Tint on Hover) */}
-                    <div className="absolute inset-0 bg-jekyll-red/0 mix-blend-multiply group-hover:bg-jekyll-red/60 transition-colors duration-500 z-10" />
+                    
 
                     {/* CTA Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">

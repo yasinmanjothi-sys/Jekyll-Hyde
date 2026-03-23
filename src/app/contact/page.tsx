@@ -88,8 +88,10 @@ export default function ContactPage() {
                             src="/MAP.png"
                             alt="Jekyll & Hyde Location Map"
                             fill
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-80"
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out grayscale contrast-125 saturate-50"
                         />
+                        {/* Permanent Red Tint Block */}
+                        <div className="absolute inset-0 bg-[#bb0a0a] mix-blend-multiply opacity-100 pointer-events-none z-10 transition-opacity duration-700 group-hover:opacity-90" />
                         
                         {/* Interactive Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-jekyll-black via-transparent to-transparent opacity-60" />
