@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Amatic_SC } from "next/font/google";
 import { archivePosters, EventSlug } from "@/lib/posters-data";
+
+const amatic = Amatic_SC({
+    weight: ["700"],
+    subsets: ["latin"],
+});
 
 const EVENTS = [
     {
@@ -101,8 +107,8 @@ export default function WeeklyEvents() {
                                 </p>
 
                                 <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center w-full">
-                                    <div className="inline-block border border-jekyll-red/50 px-4 py-2 rounded-full">
-                                        <span className="font-mono text-jekyll-red text-sm tracking-widest uppercase">
+                                    <div className="inline-block border border-jekyll-red/50 px-4 py-1 rounded-full">
+                                        <span className={`text-jekyll-red text-2xl md:text-3xl tracking-widest uppercase ${amatic.className}`}>
                                             {(closingRitualsArchive.length > 0 && closingRitualsArchive[0].time) ? closingRitualsArchive[0].time : closingRitualsEvent.time}
                                         </span>
                                     </div>
@@ -208,8 +214,8 @@ export default function WeeklyEvents() {
                                         </p>
 
                                         <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
-                                            <div className="inline-block border border-jekyll-red/50 px-4 py-2 rounded-full">
-                                                <span className="font-mono text-jekyll-red text-sm tracking-widest uppercase">
+                                            <div className="inline-block border border-jekyll-red/50 px-4 py-1 rounded-full">
+                                                <span className={`text-jekyll-red text-2xl md:text-3xl tracking-widest uppercase ${amatic.className}`}>
                                                     {(archiveImages.length > 0 && archiveImages[0].time) ? archiveImages[0].time : event.time}
                                                 </span>
                                             </div>

@@ -4,7 +4,13 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { Amatic_SC } from "next/font/google";
 import { archivePosters } from "@/lib/posters-data";
+
+const amatic = Amatic_SC({
+    weight: ["700"],
+    subsets: ["latin"],
+});
 
 export default function SpecialCollab() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -109,7 +115,7 @@ export default function SpecialCollab() {
                                         {cleanTitle || "Special Collab"}
                                     </h3>
                                     {event.time && (
-                                        <p className="font-mono text-[10px] md:text-xs text-zinc-500 tracking-[0.2em] uppercase mt-2 border border-zinc-800 px-3 py-1 inline-block rounded-full">
+                                        <p className={`text-lg md:text-xl text-jekyll-red tracking-[0.2em] uppercase mt-2 border border-jekyll-red/30 px-3 py-0.5 inline-block rounded-full ${amatic.className}`}>
                                             {event.time}
                                         </p>
                                     )}
