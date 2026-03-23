@@ -70,10 +70,7 @@ export default function NavigationBar() {
                             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
                             className="fixed top-0 left-0 bottom-0 w-full max-w-sm bg-jekyll-black border-r border-white/10 z-[60] flex flex-col p-8 shadow-2xl overflow-y-auto"
                         >
-                            <div className="flex justify-between items-center mb-12">
-                                <span className="font-gothic tracking-widest text-2xl text-jekyll-parchment uppercase">
-                                    Navigation
-                                </span>
+                            <div className="flex justify-end items-center mb-12">
                                 <button
                                     onClick={() => setIsOpen(false)}
                                     className="p-2 text-zinc-400 hover:text-white transition-colors"
