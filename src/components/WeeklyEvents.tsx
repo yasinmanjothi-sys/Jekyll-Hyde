@@ -32,6 +32,7 @@ const EVENTS = [
     {
         day: "Saturday",
         title: "Closing Rituals",
+        slug: "closing-rituals",
         description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
         time: "From 6:00 PM",
         image: "/events/closing-rituals.jpg"
@@ -81,7 +82,7 @@ export default function WeeklyEvents() {
                     // To keep Wednesday looking like a regular right-sided image (previously it was odd index 1),
                     // We can inverse the isEven check.
                     const isEven = index % 2 !== 0;
-                    const eventSlug = event.day.toLowerCase().replace(/\s+/g, '-') as EventSlug;
+                    const eventSlug = (event as any).slug || event.day.toLowerCase().replace(/\s+/g, '-') as EventSlug;
                     const archiveImages = archivePosters[eventSlug] || [];
                     const displayImage = archiveImages.length > 0 ? archiveImages[0].image : event.image;
 
