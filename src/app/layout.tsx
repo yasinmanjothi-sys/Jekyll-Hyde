@@ -67,6 +67,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://jekyllandhydekenya.com/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

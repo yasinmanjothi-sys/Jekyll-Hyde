@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <h1 className="sr-only">Jekyll & Hyde - Luxury Restaurant and Thematic Cocktail Bar in Westlands, Nairobi</h1>
+      <h1 className="sr-only">Jekyll & Hyde | Cocktail Bar & Kitchen</h1>
       <SiteHeader />
       <Hero />
       <WeeklyEvents />
