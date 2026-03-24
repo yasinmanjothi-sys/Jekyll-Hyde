@@ -19,7 +19,7 @@ const EVENTS = [
     {
         day: "Wednesday",
         title: "Pop Up Improv",
-        description: "Donation-based entry, and limited seats for the show, the terrace will remain open with free entry. DJ Set by Chopstick.",
+        description: "Improv in Nairobi Presents: Pop Up Improv + DJ Set by Chopstick. Donation-based entry, and limited seats for the show, the terrace will remain open with free entry.",
         time: "From 6:00 PM",
         image: "/events/wednesday.jpg"
     },
@@ -120,11 +120,11 @@ export default function WeeklyEvents() {
                                             {event.title}
                                         </h2>
 
-                                        <p className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-8">
+                                        <p className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-4">
                                             {event.description}
                                         </p>
 
-                                        <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                                        <div className="mt-4 pb-12 md:pb-0 border-b border-zinc-800 md:border-none w-full flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
                                             <div className="inline-block border border-burgundy/50 px-4 py-2 rounded-full">
                                                 <span className="font-mono text-burgundy text-sm tracking-widest uppercase">
                                                     {(archiveImages.length > 0 && archiveImages[0].time) ? archiveImages[0].time : event.time}
