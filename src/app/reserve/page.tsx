@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
-import SiteHeader from "@/components/SiteHeader";
 import ReservationButtons from "./ReservationButtons";
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export default function ReservePage() {
     return (
         <main className="min-h-screen bg-[#0a0a0a] text-zinc-100 flex flex-col selection:bg-burgundy/50">
             <h1 className="sr-only">Make a Reservation - Jekyll & Hyde Nairobi</h1>
-            <SiteHeader />
 
             {/* Top Spacer for Fixed Navbar */}
             <div className="h-20 w-full" />
@@ -29,12 +27,6 @@ export default function ReservePage() {
                         <h1 className="text-5xl md:text-8xl font-gothic mb-6 text-white text-center md:text-left drop-shadow-[0_0_10px_rgba(220,38,38,0.5)] tracking-widest uppercase">
                             Secure Your Ritual
                         </h1>
-
-                        <p className="text-zinc-400 font-mono text-sm md:text-base tracking-wider mb-8 text-center md:text-left max-w-md">
-                            Book early to guarantee your place in the shadows.
-                            <br /><br />
-                            Jekyll & Hyde Nairobi is the premier Cocktail Bar & Kitchen for exclusive dining and immersive nightlife in Westlands, near Lavington. We highly recommend securing table reservations in advance for our highly sought-after venue.
-                        </p>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12 text-zinc-400 font-mono text-sm tracking-wider justify-center md:justify-start">
                             <div className="flex items-start gap-4">
@@ -57,32 +49,45 @@ export default function ReservePage() {
                         </div>
 
                         <ReservationButtons />
+
+                        {/* Legal & Policies */}
+                        <div className="mt-12 pt-8 border-t border-white/10 text-zinc-500 font-mono text-xs tracking-wider leading-relaxed space-y-4">
+                            <p>Management reserves the right of admission. Alcohol will only be served to patrons above 21 years.</p>
+                            <p>All guests are advised to take due care of their personal belongings at all times. Management shall not be held liable for any loss, theft, or damage to personal property howsoever caused, unless proven negligence on the part of the management, as provided for under the laws of Kenya. By entering the premises, patrons acknowledge and accept this notice.</p>
+                            <p>Strictly no outside food or drinks allowed on this premises and its extensions. Management reserves the right to refuse entry or request the removal of any such items in accordance with applicable laws and regulations in Kenya.</p>
+                        </div>
+
+                        <p className="mt-12 text-zinc-400 font-mono text-sm md:text-base tracking-wider text-center md:text-left max-w-md">
+                            Book early to guarantee your place in the shadows.
+                            <br /><br />
+                            Jekyll & Hyde Nairobi is the premier Cocktail Bar & Kitchen for exclusive dining and immersive nightlife in Westlands, near Lavington. We highly recommend securing table reservations in advance for our highly sought-after venue.
+                        </p>
                     </div>
 
                 </div>
 
                 {/* Right Column: The Map */}
-                <div className="w-full md:w-1/2 min-h-[50vh] relative group overflow-hidden bg-burgundy/40 mt-auto md:mt-0">
+                <div className="w-full md:w-1/2 h-[400px] md:h-auto md:min-h-[50vh] relative group overflow-hidden bg-burgundy/40 md:mt-0">
                     <a
                         href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full h-full relative"
                     >
-                        {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
+                        {/* Red Night Vision Filter over Map Image */}
                         <Image
-                            src="/new_map.png"
-                            alt="Map to Jekyll & Hyde"
+                            src="/MAP.png"
+                            alt="Jekyll & Hyde Location Map"
                             fill
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                            priority
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out grayscale contrast-125 saturate-50"
                         />
-
-                        {/* "Hyde" Overlay (Red Tint on Hover) */}
-                        <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
+                        {/* Permanent Red Tint Block */}
+                        <div className="absolute inset-0 bg-[#800020] mix-blend-multiply opacity-100 pointer-events-none z-10 transition-opacity duration-700 group-hover:opacity-90" />
 
                         {/* CTA Overlay */}
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                            <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm pointer-events-none">
                                 <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN IN MAPS</span>
                             </div>
                         </div>

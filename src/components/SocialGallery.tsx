@@ -30,7 +30,7 @@ export default function SocialGallery() {
     };
 
     return (
-        <section className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section">
+        <section id="social" className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section scroll-mt-24">
 
             <Link href="/gallery" className="group block relative cursor-pointer z-10">
                 {/* Header / CTA */}

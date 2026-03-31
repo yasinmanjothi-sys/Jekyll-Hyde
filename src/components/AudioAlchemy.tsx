@@ -26,7 +26,7 @@ export default function AudioAlchemy() {
     };
 
     return (
-        <section className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section">
+        <section id="audio" className="w-full bg-black py-16 border-b border-zinc-900 overflow-hidden relative group/section scroll-mt-24">
             <div className="container mx-auto px-4 mb-8 text-center relative z-10">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-gothic text-white mb-2 tracking-widest uppercase">

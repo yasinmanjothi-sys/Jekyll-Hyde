@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Location() {
     return (
-        <section className="min-h-screen w-full bg-[#0a0a0a] text-zinc-100 flex flex-col md:flex-row">
+        <section id="contact" className="min-h-screen w-full bg-[#0a0a0a] text-zinc-100 flex flex-col md:flex-row scroll-mt-24">
 
             {/* Left Column: Info & Reservations */}
             <div className="w-full md:w-1/2 p-10 md:p-24 flex flex-col justify-center border-r border-zinc-900 bg-[url('https://www.transparenttextures.com/patterns/black-felt.png')]">
@@ -72,27 +72,27 @@ export default function Location() {
             </div>
 
             {/* Right Column: The Map */}
-            <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative group overflow-hidden bg-burgundy/40">
+            <div className="w-full md:w-1/2 h-[400px] md:h-auto md:min-h-[50vh] relative group overflow-hidden bg-burgundy/40">
                 <a
                     href="https://www.google.com/maps/place/Jekyll+and+Hyde/@-1.2649812,36.8003148,17z/data=!3m1!4b1!4m6!3m5!1s0x182f17003d617797:0xc0f0ecfff812153e!8m2!3d-1.2649866!4d36.8028897!16s%2Fg%2F11xn9c6sk7?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full h-full relative"
                 >
-                    {/* The Map Image with "Jekyll" styling (B&W High Contrast) */}
+                    {/* Red Night Vision Filter over Map Image */}
                     <Image
-                        src="/new_map.png"
-                        alt="Map to Jekyll & Hyde - High-End Restaurant and Bar near The Mall Westlands"
+                        src="/MAP.png"
+                        alt="Jekyll & Hyde Location Map"
                         fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        priority
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out grayscale contrast-125 saturate-50"
                     />
-
-                    {/* "Hyde" Overlay (Red Tint on Hover) */}
-                    <div className="absolute inset-0 bg-burgundy/0 mix-blend-multiply group-hover:bg-burgundy/60 transition-colors duration-500" />
+                    {/* Permanent Red Tint Block */}
+                    <div className="absolute inset-0 bg-[#800020] mix-blend-multiply opacity-100 pointer-events-none z-10 transition-opacity duration-700 group-hover:opacity-90" />
 
                     {/* CTA Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                        <div className="bg-black/80 px-8 py-4 border border-burgundy backdrop-blur-sm pointer-events-none">
                             <span className="font-gothic text-2xl text-burgundy tracking-widest">OPEN MAPS</span>
                         </div>
                     </div>

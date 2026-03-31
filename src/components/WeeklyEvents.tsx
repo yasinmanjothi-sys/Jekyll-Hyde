@@ -10,14 +10,6 @@ import FeaturedSpecialEvent from "./FeaturedSpecialEvent";
 
 const EVENTS = [
     {
-        day: "Saturday",
-        title: "Closing Rituals",
-        slug: "saturday",
-        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
-        time: "From 6:00 PM",
-        image: "/events/closing-rituals.jpg"
-    },
-    {
         day: "Wednesday",
         title: "Midweek Blend",
         description: "A fluid midweek session where DJ sets intertwine with live instrumentation. Designed for after-work drinks that ease you into the night.",
@@ -37,6 +29,22 @@ const EVENTS = [
         description: "Your weekly descent into high-energy pop, remixed anthems, and unapologetic singalongs. From throwbacks to current hits, Pop Culture redefines the weekend kickoff with an electric atmosphere designed for those who want to dance until the lights come on.",
         time: "From 6:00 PM",
         image: "/events/friday.jpg"
+    },
+    {
+        day: "Saturday",
+        title: "Sacrosant",
+        slug: "saturday",
+        description: "Experience the Saturday night energy with Sacrosant. A perfect blend of great music, open-terrace vibes, and an unforgettable weekend atmosphere.",
+        time: "From 6:00 PM",
+        image: "/events/saturday.jpg"
+    },
+    {
+        day: "Signature Event",
+        title: "Closing Rituals",
+        slug: "closing-rituals",
+        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
+        time: "From 6:00 PM",
+        image: "/events/closing-rituals.jpg"
     }
 ];
 

@@ -628,12 +628,6 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     ],
     "closing-rituals": [
         {
-            "id": "closing-rituals-3",
-            "title": "4_9pm",
-            "time": "9PM",
-            "image": "/archive/closing-rituals/4_9pm.PNG"
-        },
-        {
             "id": "closing-rituals-2",
             "title": "3_6pm",
             "time": "6PM",

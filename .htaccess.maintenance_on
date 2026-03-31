@@ -1,0 +1,13 @@
+# MAINTENANCE ON: Redirect everything to maintenance.html
+RewriteEngine On
+RewriteBase /
+
+# 1. Do NOT redirect if the request is for the maintenance page itself
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+
+# 2. (Optional) ALLOW your specific IP address to see the site while testing
+# Replace 1.2.3.4 with your actual IP address
+# RewitCond %{REMOTE_ADDR} !^1\.2\.3\.4$
+
+# 3. Redirect everything else to maintenance.html
+RewriteRule ^(.*)$ /maintenance.html [R=302,L]
