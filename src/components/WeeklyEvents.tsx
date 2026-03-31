@@ -6,20 +6,21 @@ import Link from "next/link";
 import React from "react";
 import { archivePosters, EventSlug } from "@/lib/posters-data";
 import SpecialCollab from "./SpecialCollab";
+import FeaturedSpecialEvent from "./FeaturedSpecialEvent";
 
 const EVENTS = [
     {
         day: "Saturday",
         title: "Closing Rituals",
-        slug: "closing-rituals",
+        slug: "saturday",
         description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
         time: "From 6:00 PM",
         image: "/events/closing-rituals.jpg"
     },
     {
         day: "Wednesday",
-        title: "Pop Up Improv",
-        description: "Improv in Nairobi Presents: Pop Up Improv + DJ Set by Chopstick. Donation-based entry, and limited seats for the show, the terrace will remain open with free entry.",
+        title: "Midweek Blend",
+        description: "A fluid midweek session where DJ sets intertwine with live instrumentation. Designed for after-work drinks that ease you into the night.",
         time: "From 6:00 PM",
         image: "/events/wednesday.jpg"
     },
@@ -41,7 +42,10 @@ const EVENTS = [
 
 export default function WeeklyEvents() {
     return (
-        <section id="events" className="min-h-screen w-full bg-zinc-950 text-white py-24 px-6 md:px-0 overflow-hidden">
+        <section id="events" className="min-h-screen w-full bg-zinc-950 text-white py-12 md:py-24 px-6 md:px-0 overflow-hidden">
+            
+            {/* Featured Special Event at the TOP */}
+            <FeaturedSpecialEvent />
 
             {/* Section Header for ALL Events */}
             <div className="container mx-auto px-4 mb-24 text-center relative z-10 w-full">
