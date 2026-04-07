@@ -55,6 +55,7 @@ export default function WeeklyEvents() {
             {/* Featured Special Event at the TOP */}
             <FeaturedSpecialEvent />
 
+
             {/* Section Header for ALL Events */}
             <div className="container mx-auto px-4 mb-24 text-center relative z-10 w-full">
                 <motion.h2
@@ -165,10 +166,11 @@ export default function WeeklyEvents() {
                 })}
             </div>
 
-            {/* 2. Collaboration Events (Moved to the bottom here right above Audio Alchemy in the parent) */}
+            {/* 2. Collaboration Events (Moved to the bottom below weekly events) */}
             <div className="flex flex-col w-full">
                 <SpecialCollab />
             </div>
+
         </section>
     );
 }

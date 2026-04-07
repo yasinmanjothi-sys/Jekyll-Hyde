@@ -88,9 +88,6 @@ export default function Menu() {
                     >
                         THE MENU <span className="sr-only">- Dining near Artcaffé Gastro Bar & Drinks near 254 Beer District</span>
                     </motion.h2>
-                    <p className="font-mono text-zinc-400 text-lg md:text-xl tracking-[0.3em] uppercase font-bold">
-                        -- UNRELEASED FLAVOURS --
-                    </p>
                 </div>
 
                 {/* Categories / Tabs */}

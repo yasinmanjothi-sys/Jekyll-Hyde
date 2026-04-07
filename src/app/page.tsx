@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
+import AwardsRecognition from "@/components/AwardsRecognition";
 import Menu from "@/components/Menu";
 import WeeklyEvents from "@/components/WeeklyEvents";
 import Location from "@/components/Location";
@@ -15,12 +16,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <h1 className="sr-only">Jekyll & Hyde | Cocktail Bar & Kitchen</h1>
       <Hero />
       <WeeklyEvents />
       <AudioAlchemy />
       <SocialGallery />
       <Menu />
+      <AwardsRecognition />
       <Location />
       <Footer />
     </main>
