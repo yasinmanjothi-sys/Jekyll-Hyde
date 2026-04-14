@@ -31,14 +31,6 @@ const EVENTS = [
         image: "/events/friday.jpg"
     },
     {
-        day: "Saturday",
-        title: "Sacrosant",
-        slug: "saturday",
-        description: "Experience the Saturday night energy with Sacrosant. A perfect blend of great music, open-terrace vibes, and an unforgettable weekend atmosphere.",
-        time: "From 6:00 PM",
-        image: "/events/saturday.jpg"
-    },
-    {
         day: "Signature Event",
         title: "Closing Rituals",
         slug: "closing-rituals",
