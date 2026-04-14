@@ -696,16 +696,10 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     ],
     "collaboration-events": [
         {
-            "id": "collaboration-events-3",
+            "id": "collaboration-events-2",
             "title": "6_ puzzle x Jekyll & Hyde",
             "time": "PUZZLE X JEKYLL & HYDE",
             "image": "/archive/collaboration-events/6_ puzzle x Jekyll & Hyde.jpeg"
-        },
-        {
-            "id": "collaboration-events-2",
-            "title": "5_ puzzle x Jekyll & Hyde",
-            "time": "PUZZLE X JEKYLL & HYDE",
-            "image": "/archive/collaboration-events/5_ puzzle x Jekyll & Hyde.jpeg"
         },
         {
             "id": "collaboration-events-1",
