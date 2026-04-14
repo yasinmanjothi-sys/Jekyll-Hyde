@@ -62,7 +62,7 @@ export default function FeaturedSpecialEvent() {
                                         <span className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest">When</span>
                                         <div className="flex items-center gap-3">
                                             <span className="text-white font-gothic text-2xl uppercase">18th April</span>
-                                            <span className="text-burgundy font-mono text-sm">10PM - 6AM</span>
+                                            <span className="text-burgundy font-mono text-sm">9PM - 6AM</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2">
@@ -71,7 +71,13 @@ export default function FeaturedSpecialEvent() {
                                     </div>
                                     <div className="flex flex-col gap-2">
                                         <span className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest">Lineup</span>
-                                        <span className="text-white font-sans text-lg italic">To be announced soon...</span>
+                                        <div className="flex flex-wrap gap-x-3 gap-y-1">
+                                            {["Suraj", "Kalesh E.", "Priss", "MMZ", "Lilo & Raya", "Pyjama", "Faure"].map((name, i, arr) => (
+                                                <span key={name} className="text-white font-sans text-lg">
+                                                    {name}{i < arr.length - 1 && <span className="text-burgundy mx-1">·</span>}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                     <div className="flex flex-col gap-2">
                                         <span className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest">Dress Code</span>
