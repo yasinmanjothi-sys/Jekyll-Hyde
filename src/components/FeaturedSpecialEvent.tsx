@@ -19,7 +19,7 @@ export default function FeaturedSpecialEvent() {
                     {/* Media Section */}
                     <div className="w-full lg:w-1/2 relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] group overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl shadow-burgundy/10">
                         <Image
-                            src="/archive/collaboration-events/5_ puzzle x Jekyll & Hyde.jpeg"
+                            src="/archive/collaboration-events/6_ puzzle x Jekyll & Hyde.jpeg"
                             alt="Jekyll & Hyde + Puzzle presents Nasty Grooves Vol.5: DOWN THE RABBIT HOLE"
                             fill
                             className="object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
