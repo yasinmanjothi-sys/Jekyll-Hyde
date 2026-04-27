@@ -14,6 +14,18 @@ export type EventSlug = 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'clos
 export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     "wednesday": [
         {
+            "id": "wednesday-6",
+            "title": "14_8pm",
+            "time": "8PM",
+            "image": "/archive/wednesday/14_8pm.PNG"
+        },
+        {
+            "id": "wednesday-5",
+            "title": "13_8pm",
+            "time": "8PM",
+            "image": "/archive/wednesday/13_8pm.PNG"
+        },
+        {
             "id": "wednesday-4",
             "title": "12_8pm",
             "time": "8PM",
@@ -32,19 +44,19 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
             "image": "/archive/wednesday/10_8pm.PNG"
         },
         {
-            "id": "wednesday-11",
+            "id": "wednesday-13",
             "title": "9_7pm-8.30pm",
             "time": "7PM-8.30PM",
             "image": "/archive/wednesday/9_7pm-8.30pm.JPG"
         },
         {
-            "id": "wednesday-10",
+            "id": "wednesday-12",
             "title": "8_8pm",
             "time": "8PM",
             "image": "/archive/wednesday/8_8pm.PNG"
         },
         {
-            "id": "wednesday-9",
+            "id": "wednesday-11",
             "title": "7_8pm",
             "time": "8PM",
             "image": "/archive/wednesday/7_8pm.PNG"
@@ -56,25 +68,25 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
             "image": "/archive/wednesday/ 6 _8pm.png"
         },
         {
-            "id": "wednesday-8",
+            "id": "wednesday-10",
             "title": "5",
             "time": "",
             "image": "/archive/wednesday/5.png"
         },
         {
-            "id": "wednesday-7",
+            "id": "wednesday-9",
             "title": "4",
             "time": "",
             "image": "/archive/wednesday/4.png"
         },
         {
-            "id": "wednesday-6",
+            "id": "wednesday-8",
             "title": "3",
             "time": "",
             "image": "/archive/wednesday/3.png"
         },
         {
-            "id": "wednesday-5",
+            "id": "wednesday-7",
             "title": "2",
             "time": "",
             "image": "/archive/wednesday/2.png"
@@ -87,6 +99,12 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
         }
     ],
     "thursday": [
+        {
+            "id": "thursday-18",
+            "title": "26_9.30pm",
+            "time": "9.30PM",
+            "image": "/archive/thursday/26_9.30pm.PNG"
+        },
         {
             "id": "thursday-17",
             "title": "25_9.30pm",
@@ -184,43 +202,43 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
             "image": "/archive/thursday/10.png"
         },
         {
-            "id": "thursday-24",
+            "id": "thursday-25",
             "title": "9",
             "time": "",
             "image": "/archive/thursday/9.png"
         },
         {
-            "id": "thursday-23",
+            "id": "thursday-24",
             "title": "8",
             "time": "",
             "image": "/archive/thursday/8.png"
         },
         {
-            "id": "thursday-22",
+            "id": "thursday-23",
             "title": "7",
             "time": "",
             "image": "/archive/thursday/7.png"
         },
         {
-            "id": "thursday-21",
+            "id": "thursday-22",
             "title": "6",
             "time": "",
             "image": "/archive/thursday/6.png"
         },
         {
-            "id": "thursday-20",
+            "id": "thursday-21",
             "title": "5",
             "time": "",
             "image": "/archive/thursday/5.png"
         },
         {
-            "id": "thursday-19",
+            "id": "thursday-20",
             "title": "4",
             "time": "",
             "image": "/archive/thursday/4.png"
         },
         {
-            "id": "thursday-18",
+            "id": "thursday-19",
             "title": "3",
             "time": "",
             "image": "/archive/thursday/3.png"
@@ -239,6 +257,18 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
         }
     ],
     "friday": [
+        {
+            "id": "friday-31",
+            "title": "38_9pm",
+            "time": "9PM",
+            "image": "/archive/friday/38_9pm.PNG"
+        },
+        {
+            "id": "friday-30",
+            "title": "37_9pm",
+            "time": "9PM",
+            "image": "/archive/friday/37_9pm.PNG"
+        },
         {
             "id": "friday-29",
             "title": "36_9pm",
@@ -402,37 +432,37 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
             "image": "/archive/friday/10.png"
         },
         {
-            "id": "friday-35",
+            "id": "friday-37",
             "title": "9",
             "time": "",
             "image": "/archive/friday/9.png"
         },
         {
-            "id": "friday-34",
+            "id": "friday-36",
             "title": "8",
             "time": "",
             "image": "/archive/friday/8.png"
         },
         {
-            "id": "friday-33",
+            "id": "friday-35",
             "title": "7",
             "time": "",
             "image": "/archive/friday/7.png"
         },
         {
-            "id": "friday-32",
+            "id": "friday-34",
             "title": "6",
             "time": "",
             "image": "/archive/friday/6.png"
         },
         {
-            "id": "friday-31",
+            "id": "friday-33",
             "title": "5",
             "time": "",
             "image": "/archive/friday/5.png"
         },
         {
-            "id": "friday-30",
+            "id": "friday-32",
             "title": "4",
             "time": "",
             "image": "/archive/friday/4.png"
@@ -457,6 +487,18 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
         }
     ],
     "saturday": [
+        {
+            "id": "saturday-30",
+            "title": "37_9pm",
+            "time": "9PM",
+            "image": "/archive/saturday/37_9pm.PNG"
+        },
+        {
+            "id": "saturday-29",
+            "title": "36_9pm",
+            "time": "9PM",
+            "image": "/archive/saturday/36_9pm.PNG"
+        },
         {
             "id": "saturday-28",
             "title": "35_9pm",
@@ -614,37 +656,37 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
             "image": "/archive/saturday/10.png"
         },
         {
-            "id": "saturday-34",
+            "id": "saturday-36",
             "title": "9",
             "time": "",
             "image": "/archive/saturday/9.png"
         },
         {
-            "id": "saturday-33",
+            "id": "saturday-35",
             "title": "8",
             "time": "",
             "image": "/archive/saturday/8.png"
         },
         {
-            "id": "saturday-32",
+            "id": "saturday-34",
             "title": "7",
             "time": "",
             "image": "/archive/saturday/7.png"
         },
         {
-            "id": "saturday-31",
+            "id": "saturday-33",
             "title": "6",
             "time": "",
             "image": "/archive/saturday/6.png"
         },
         {
-            "id": "saturday-30",
+            "id": "saturday-32",
             "title": "5",
             "time": "",
             "image": "/archive/saturday/5.png"
         },
         {
-            "id": "saturday-29",
+            "id": "saturday-31",
             "title": "4",
             "time": "",
             "image": "/archive/saturday/4.png"
@@ -671,9 +713,9 @@ export const archivePosters: Record<EventSlug, ArchivePoster[]> = {
     "closing-rituals": [
         {
             "id": "closing-rituals-3",
-            "title": "4_.6pmPNG",
-            "time": ".6PMPNG",
-            "image": "/archive/closing-rituals/4_.6pmPNG.PNG"
+            "title": "4_6pm",
+            "time": "6PM",
+            "image": "/archive/closing-rituals/4_6pm.PNG"
         },
         {
             "id": "closing-rituals-2",

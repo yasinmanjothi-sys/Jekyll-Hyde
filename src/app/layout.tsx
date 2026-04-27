@@ -45,17 +45,17 @@ export const metadata: Metadata = {
   authors: [{ name: "Jekyll & Hyde" }],
   openGraph: {
     title: "Jekyll & Hyde | Cocktail Bar & Kitchen",
-    description: "Cocktail Bar & Kitchen",
+    description: "Jekyll & Hyde Cocktail bar and kitchen",
     url: "https://jekyllandhydekenya.com",
     siteName: "Jekyll & Hyde",
     type: "website",
     locale: "en_KE",
     images: [
       {
-        url: "/map_screenshot.png", // Using the map as a placeholder OG image
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Jekyll & Hyde Nairobi Location Map",
+        alt: "Jekyll & Hyde Logo",
       },
     ],
   },

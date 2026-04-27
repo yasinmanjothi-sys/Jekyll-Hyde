@@ -18,25 +18,25 @@ const EVENTS = [
     },
     {
         day: "Thursday",
-        title: "Groove Town",
-        description: "An evening dedicated to live music, soulful vocals, and effortless groove. From smooth classic covers to funk-leaning rhythms and expressive individual to band sets, Thursdays are warm, social, and musically rich, the perfect build towards the weekend.",
-        time: "From 6:00 PM",
-        image: "/events/thursday.jpg"
-    },
-    {
-        day: "Friday",
-        title: "Pop Culture",
-        description: "Your weekly descent into high-energy pop, remixed anthems, and unapologetic singalongs. From throwbacks to current hits, Pop Culture redefines the weekend kickoff with an electric atmosphere designed for those who want to dance until the lights come on.",
-        time: "From 6:00 PM",
-        image: "/events/friday.jpg"
-    },
-    {
-        day: "Signature Event",
         title: "Closing Rituals",
         slug: "closing-rituals",
         description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
         time: "From 6:00 PM",
         image: "/events/closing-rituals.jpg"
+    },
+    {
+        day: "Friday",
+        title: "Pop Culture",
+        description: "A high-energy atmosphere built around recognisable anthems and dancefloor favourites. Expect popular hits, playful pop edits, disco-leaning cuts, and crowd-driven selections that keep the room vibrant all night. It’s familiar, fun, and unapologetically feel-good.",
+        time: "From 6:00 PM",
+        image: "/events/friday.jpg"
+    },
+    {
+        day: "Saturday",
+        title: "Sacrosanct",
+        description: "A deeper, more immersive Saturday experience. House melodies, steady builds, and layered soundscapes define the night- crafted for those who appreciate progression, atmosphere, and a dancefloor that evolves with intention. High energy, but refined.",
+        time: "From 6:00 PM",
+        image: "/events/saturday.jpg"
     }
 ];
 
@@ -45,7 +45,7 @@ export default function WeeklyEvents() {
         <section id="events" className="min-h-screen w-full bg-zinc-950 text-white py-12 md:py-24 px-6 md:px-0 overflow-hidden">
             
             {/* Featured Special Event at the TOP */}
-            <FeaturedSpecialEvent />
+            {/* <FeaturedSpecialEvent /> */}
 
 
             {/* Section Header for ALL Events */}
