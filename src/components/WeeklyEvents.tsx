@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { archivePosters, EventSlug } from "@/lib/posters-data";
+import { archivePosters } from "@/lib/posters-data";
 import SpecialCollab from "./SpecialCollab";
-import FeaturedSpecialEvent from "./FeaturedSpecialEvent";
 
 const EVENTS = [
     {
@@ -18,11 +16,10 @@ const EVENTS = [
     },
     {
         day: "Thursday",
-        title: "Closing Rituals",
-        slug: "closing-rituals",
-        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
+        title: "Groove Town",
+        description: "An evening dedicated to live music, soulful vocals, and effortless groove. From smooth classic covers to funk-leaning rhythms and expressive individual to band sets, Thursdays are warm, social, and musically rich, the perfect build towards the weekend.",
         time: "From 6:00 PM",
-        image: "/events/closing-rituals.jpg"
+        image: "/events/thursday.jpg"
     },
     {
         day: "Friday",
@@ -37,17 +34,20 @@ const EVENTS = [
         description: "A deeper, more immersive Saturday experience. House melodies, steady builds, and layered soundscapes define the night- crafted for those who appreciate progression, atmosphere, and a dancefloor that evolves with intention. High energy, but refined.",
         time: "From 6:00 PM",
         image: "/events/saturday.jpg"
+    },
+    {
+        day: "Signature Event",
+        title: "Closing Rituals",
+        slug: "closing-rituals",
+        description: "Our signature end-of-month gathering. A bigger lineup, sunset-to-late-night energy, and an open-terrace atmosphere that brings the community together. Expect extended sets, elevated production, and a packed dancefloor, all with free entry.",
+        time: "From 6:00 PM",
+        image: "/events/closing-rituals.jpg"
     }
 ];
 
 export default function WeeklyEvents() {
     return (
         <section id="events" className="min-h-screen w-full bg-zinc-950 text-white py-12 md:py-24 px-6 md:px-0 overflow-hidden">
-            
-            {/* Featured Special Event at the TOP */}
-            {/* <FeaturedSpecialEvent /> */}
-
-
             {/* Section Header for ALL Events */}
             <div className="container mx-auto px-4 mb-24 text-center relative z-10 w-full">
                 <motion.h2
@@ -74,9 +74,6 @@ export default function WeeklyEvents() {
             {/* Regular Weekly Events List - Wednesday to Saturday */}
             <div className="flex flex-col w-full">
                 {EVENTS.map((event, index) => {
-                    // Since closing rituals & collab are out of the loop, Wednesday is now index 0. 
-                    // To keep Wednesday looking like a regular right-sided image (previously it was odd index 1),
-                    // We can inverse the isEven check.
                     const isEven = index % 2 !== 0;
                     const eventSlug = ((event as any).slug || event.day.toLowerCase().replace(/\s+/g, '-')) as keyof typeof archivePosters;
                     const archiveImages = archivePosters[eventSlug] || [];
