@@ -15,9 +15,10 @@ const EVENTS = [
         image: "/events/wednesday.jpg"
     },
     {
-        day: "Thursday",
-        title: "Groove Town",
-        description: "An evening dedicated to live music, soulful vocals, and effortless groove. From smooth classic covers to funk-leaning rhythms and expressive individual to band sets, Thursdays are warm, social, and musically rich, the perfect build towards the weekend.",
+        day: "Special Event",
+        title: "Thursday Nairobi: One Year Anniversary",
+        slug: "thursday",
+        description: "Nairobi celebrates one year of matchmaking, mingling, and memorable nights with a special anniversary edition at J&H.",
         time: "From 6:00 PM",
         image: "/events/thursday.jpg"
     },
