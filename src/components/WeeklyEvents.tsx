@@ -9,31 +9,30 @@ import SpecialCollab from "./SpecialCollab";
 const EVENTS = [
     {
         day: "Wednesday",
-        title: "Midweek Blend",
-        description: "A fluid midweek session where DJ sets intertwine with live instrumentation. Designed for after-work drinks that ease you into the night.",
+        title: "Jekyll & Hyde Turns One",
+        description: "Wednesday – Jekyll & Hyde Turns One\nThis Wednesday ✨\n\nA year of great drinks, good company, and a community that has made our space what it is. Thank you for being part of the journey so far. We have more coming. ✨\n\nTo mark the occasion, we're unveiling the next chapter of J&H: a refreshed food and cocktail menu, months in the making. Expect bold flavours, carefully crafted pairings, and original cocktails inspired by African spirits, herbs, and spices that celebrate local culture and heritage.\n\nDJ Chopstick will be on the decks spinning your favourite 80s and 90s classics.\n\nJoin us this Wednesday and be among the first to experience it. 🖤",
         time: "From 6:00 PM",
         image: "/events/wednesday.jpg"
     },
     {
-        day: "Special Event",
-        title: "Thursday Nairobi: One Year Anniversary",
-        slug: "thursday",
-        description: "Nairobi celebrates one year of matchmaking, mingling, and memorable nights with a special anniversary edition at J&H.",
-        time: "From 6:00 PM",
+        day: "Thursday",
+        title: "Groove Town",
+        description: "An evening dedicated to live music, soulful vocals, and effortless groove. From smooth classic covers to funk-leaning rhythms and expressive individual to band sets, Thursdays are warm, social, and musically rich, the perfect build towards the weekend.",
+        time: "From 9:30 PM",
         image: "/events/thursday.jpg"
     },
     {
         day: "Friday",
         title: "Pop Culture",
-        description: "A high-energy atmosphere built around recognisable anthems and dancefloor favourites. Expect popular hits, playful pop edits, disco-leaning cuts, and crowd-driven selections that keep the room vibrant all night. It’s familiar, fun, and unapologetically feel-good.",
+        description: "A high-energy atmosphere built around recognisable anthems and dancefloor favourites. Expect popular hits, playful pop edits, disco-leaning cuts, and crowd-driven selections that keep the room vibrant all night. It's familiar, fun, and unapologetically feel-good.",
         time: "From 6:00 PM",
         image: "/events/friday.jpg"
     },
     {
         day: "Saturday",
         title: "Sacrosanct",
-        description: "A deeper, more immersive Saturday experience. House melodies, steady builds, and layered soundscapes define the night- crafted for those who appreciate progression, atmosphere, and a dancefloor that evolves with intention. High energy, but refined.",
-        time: "From 6:00 PM",
+        description: "Our flagship Saturday night. The biggest lineup of the week, peak-time energy, and a dancefloor that doesn't stop. Expect a full night of curated DJ sets taking you deep into the early hours.",
+        time: "From 9:00 PM",
         image: "/events/saturday.jpg"
     },
     {
@@ -126,6 +125,17 @@ export default function WeeklyEvents() {
                                         <p className="font-sans text-zinc-400 text-lg md:text-xl max-w-md leading-relaxed mb-4">
                                             {event.description}
                                         </p>
+
+                                        {(event as any).ticketUrl && (
+                                            <a
+                                                href={(event as any).ticketUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 border border-white/80 hover:bg-white hover:text-zinc-950 text-white font-mono text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300 mb-6"
+                                            >
+                                                Get Tickets →
+                                            </a>
+                                        )}
 
                                         <div className="mt-4 pb-12 md:pb-0 border-b border-zinc-800 md:border-none w-full flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
                                             <div className="inline-block border border-burgundy/50 px-4 py-2 rounded-full">
